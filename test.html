@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id='myInput' onkeyup='searchTable()' type='text'>
+
+<table id='myTable'>
+   <tr>
+      <td>Apple</td>
+      <td>Green</td>
+   </tr>
+   <tr>
+      <td>Grapes</td>
+      <td>Green</td>
+   </tr>
+   <tr>
+      <td>Orange</td>
+      <td>Orange</td>
+   </tr>
+</table>
+
+<script>
+function searchTable() {
+    var input, filter, found, table, tr, td, i, j;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (j = 0; j < td.length; j++) {
+            if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                found = true;
+            }
+        }
+        if (found) {
+            tr[i].style.display = "";
+            found = false;
+        } else {
+            tr[i].style.display = "none";
+        }
+    }
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="ways__search">
+  <input id="searchbar" onkeyup="search_guids()" type="text" name="search" placeholder="Search...">
+</div>
+<div class="ways__sort">
+
+</div>
+
+
+function search_guids() {
+  let input = document.getElementById('searchbar').value
+  input = input.toLowerCase();
+  let x = document.getElementsByClassName('ways__el');
+
+  for (i = 0; i < x.length; i++) {
+      if (!x[i].innerHTML.toLowerCase().includes(input)) {
+          x[i].style.display = "none";
+      }
+      else {
+          x[i].style.display = "list-item";
+      }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./assets/css/contacs.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+</head>
+<body>
+<section class="body">
+    <section class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <a href="./main.html" class="header__logos">
+                    <img src="./assets/img/logo (1).svg" alt="" class="header__logo">
+                    <img src="./assets/img/VRia.svg" alt="" class="header__logo-text">
+                </a>
+                <div class="header__box">
+                    <a href="./contacts.html" class="header__text header__text_1">
+                        Контакты
+                    </a>
+                    <a href="./main.html#questions" class="header__text header__text_2">
+                        Вопросы
+                    </a>
+                    <button id="myBtn" class="header__text header__text_3">
+                        Карта
+                    </button>
+                    <button id="myenter" class="header__text header__text_4">
+                        Личный кабинет
+                    </button>
+                    <div id="myModal" class="modal">
+  
+   
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2 class="modal-text">Ищите нас тут</h2>
+                          </div>
+                          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acd65e83d8227397afa4d2e0dd27757196e91a0afb8261872c9050fa8e4e88539&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+                        </div>
+                      
+                      </div>
+                      
+                    </div>
+                    <div id="modelener" class="enter">
+
+                        <div class="enter__content">
+                            <div class="enter__box">
+                                
+                                <p class="enter__title">
+                                    Добро пожаловать!   
+                                    <span class="enter__close eclose">&times;</span>
+                                </p>
+                                <form class="enter__form" action="./main.html" method="get">
+                                        
+                                    <input class="enter__input" type="email" id="email" name="email" placeholder="Email" required>
+                                                        
+                                    <input class="enter__input enter__input_last" type="password" id="password" name="password" placeholder="Введите пароль" required>
+                                    
+                                    <input class="enter__input-btn" type="submit" value="Войти">
+                                </form>
+                                <div class="enter__login-box">
+                                    <p class="enter__login-text">
+                                        Нет аккаунта, тогда регистрируйся
+                                    </p>
+                                    <button id="myreg" class="enter__btn-link">
+                                        <div class="enter__login-btn">
+                                            <span>Зарегистрироваться</span>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>                   
+
+                      
+                    </div>
+                    <div id="modelelog" class="log">
+                        <div class="log__content">
+                            <div class="log__box">
+                                <p class="log__title">
+                                    Зарегистрируйся на нашем сайте
+                                    <span class="log__close lclose">&times;</span>
+                                </p>
+                                <form class="log__form" action="./main.html" method="get">
+                                    
+                                    <input class="log__input" type="text" id="name" name="name" placeholder="Имя" required>
+                                  
+                                    
+                                    <input class="log__input" type="text" id="sname" name="name" placeholder="Фамилия" required>
+            
+                                    
+                                    <input class="log__input" type="email" id="email1" name="email" placeholder="Email" required>
+                                  
+                                    
+                                    <input class="log__input log__input_last" type="password" id="password1" name="password" placeholder="Придумайте пароль" required>
+                                  
+                                    <input class="log__input-btn" type="submit" value="Зарегистрироваться">
+                                </form>
+                                <div class="log__login-box">
+                                    <p class="log__login-text">
+                                        Рады видеть!Уже с нами?
+                                    </p>
+                                    <button id="myclose" class="log__btn-link">
+                                        <div class="log__login-btn">
+                                            <span>Войти</span>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>                
+
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="menu">
+        <div id="menu-bar" onclick="menuOnClick()">
+          <div id="bar1" class="bar"></div>
+          <div id="bar2" class="bar"></div>
+          <div id="bar3" class="bar"></div>
+        </div>
+        <nav class="nav" id="nav">
+          <ul>
+            <a href="./main.html">На главную</a>
+            <a href="./contacts.html">Контакты</a>
+            <a href="./main.html#questions">Вопросы</a>
+            <button id="myBtnu">Карта</button>
+          </ul>
+        </nav> 
+    </div>
+      
+    <div class="menu-bg" id="menu-bg"></div>
+    <div id="myModalu" class="modal">
+  
+   
+        <div class="modalu-content">
+          <div class="modalu-header">
+            <span class="closeu">&times;</span>
+            <h2 class="modalu-text">Ищите нас тут</h2>
+          </div>
+          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acd65e83d8227397afa4d2e0dd27757196e91a0afb8261872c9050fa8e4e88539&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+      
+      </div>
+      
+    </div>
+
+
+
+
+
+    <section class="cont">
+        <div class="container">
+            <div class="cont__wrapper">
+                <div class="cont__box">
+                    
+                </div>
+                <div class="cont__box">
+
+                </div>
+                <div class="cont__box">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="foot">
+        <div class="container foot__container">
+            <div class="foot__logo-box foot__box">
+                <a href="./main.html"><img src="./assets/img/logof.svg" alt="" class="foot__img"></a>
+            </div>
+            <div class="foot__title-box foot__box">
+                <a href="./main.html"><img src="./assets/img/VRrariaf.svg" alt="" class="foot__svg"></a>
+                <button id="support-btn" class="foot__sup">
+                    ПОДДЕРЖИТЕ НАС
+                </button>
+            </div>
+            <div class="foot__text-box foot__box">
+                <button id="about-btn" class="foot__about">
+                    О нас
+                </button>
+                <p class="foot__us">
+                    Мы в соц сетях
+                </p>
+                <div class="foot__icons">
+                    <a href="https://www.youtube.com/@MrBeast"><img src="./assets/img/yt.svg" alt="" class="foot__icon"></a>
+                    <a href="https://vk.com/apsci_inc"><img src="./assets/img/wk.svg" alt="" class="foot__icon"></a>
+                    <a href="https://t.me/i_will_serve_to_Kabachok"><img src="./assets/img/TG.svg" alt="" class="foot__icon"></a>
+                </div>
+                <p class="foot__protect">
+                    ©2024 VRraria.ru
+                </p>
+                <p class="foot__konf">
+                    VRria все права защищены
+                </p>
+            </div>
+        </div>
+    </section>
+    <div id="about" class="about">
+
+
+        <div class="about__content">
+            <div class="about__header">
+                <span class="about__closex">&times;</span>
+                <h2 class="about__title">О нас</h2>
+            </div>
+            <div class="about__body">
+                <h2 class="about__text">
+                    "Вчера, в 14:37 по местному времени, произошло мощное землетрясение магнитудой 7,2 балла по шкале Рихтера. Эпицентр находился в [название региона], в [расстояние] километрах от города [название города].  Подземные толчки ощущались на огромной территории, в радиусе [расстояние] километров.  Сообщения о разрушениях поступают из нескольких населённых пунктов.  По предварительным данным, пострадало [количество] человек, из них [количество] госпитализированы с травмами различной степени тяжести.  Спасательные службы работают в круглосуточном режиме, разбирая завалы и эвакуируя пострадавших.  Сильнее всего пострадали здания, построенные без соблюдения норм сейсмостойкости.  Специалисты отмечают, что это землетрясение стало одним из самых мощных за последние [количество] лет в данном регионе.  В настоящее время проводятся работы по оценке масштабов разрушений и оказанию помощи пострадавшим.  Многие жители лишились крова, и им необходима срочная гуманитарная помощь: палатки, вода, продукты питания, медикаменты.  Международные организации уже начали оказывать поддержку пострадавшим районам, направляя специалистов и гуманитарные грузы.  После землетрясения были зафиксированы многочисленные афтершоки, что вызывает обеспокоенность у специалистов и местных жителей.  Ситуация находится под контролем властей, которые призывают сохранять спокойствие и следовать рекомендациям спасательных служб."
+                </h2>
+            </div>
+        </div>
+    </div>
+    <div id="support" class="support">
+
+
+        <div class="support__content">
+            <div class="support__header">
+                <span class="support__closex">&times;</span>
+                <h1 class="support__title">Поддержите нас пазязя (: </h1>                 
+                <img src="./assets/img/qr_image.png" alt="" class="support__img">
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/contacs.js"></script>
+</section>
+</body>
+</html> 
