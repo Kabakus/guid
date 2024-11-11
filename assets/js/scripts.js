@@ -5,7 +5,7 @@ var btn = document.getElementById("myBtn");
 
 
 
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("modal__close")[0];
 
 
 
@@ -13,8 +13,6 @@ btn.onclick = function() {
     modal.style.display = "block";
     
 }
-
-
 
 span.onclick = function() {
     modal.style.display = "none";
@@ -100,10 +98,10 @@ btncl.onclick = function() {
 
 
 function menuOnClick() {
-    document.getElementById("menu-bar").classList.toggle("change");
-    document.getElementById("nav").classList.toggle("change");
+    document.getElementById("menu-bar").classList.toggle("menu__change");
+    document.getElementById("nav").classList.toggle("menu__change");
     document.getElementById("menu-bg").classList.toggle("change-bg");
-  }
+}
 
 
   var modalu = document.getElementById('myModalu');
@@ -113,7 +111,7 @@ function menuOnClick() {
   
   
   
-  var spanu = document.getElementsByClassName("closeu")[0];
+  var spanu = document.getElementsByClassName("modalu__close")[0];
   
   
   
@@ -154,7 +152,7 @@ function menuOnClick() {
   
   
   
-  var spanm = document.getElementsByClassName("closes")[0];
+  var spanm = document.getElementsByClassName("modals__close")[0];
   
   
   

@@ -367,7 +367,7 @@ body{
     border: none;
   }
   
-  .modal {
+.modal {
     display: none; 
     position: fixed; 
     z-index: 4; 
@@ -379,168 +379,155 @@ body{
     overflow: auto; 
     background-color: rgb(0, 0, 0); 
     background-color: rgba(0, 0, 0, 0.4); 
-  }
-  .modal-text{
-    text-align: center;
-  }
-  .modal-content {
-    position: relative;
-    margin: auto;
-    padding: 0;
-    border: 5px solid #7B1FA2;
-    width: 50%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s;
-  }
-  @keyframes animatetop {
-    from {
-      top: -300px;
-      opacity: 0;
+  
+    &__text{
+      text-align: center;
     }
-    to {
-      top: 0;
-      opacity: 1;
+    &__content {
+      position: relative;
+      margin: auto;
+      padding: 0;
+      border: 5px solid #7B1FA2;
+      width: 50%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      -webkit-animation-name: animatetop;
+      -webkit-animation-duration: 0.4s;
+      animation-name: animatetop;
+      animation-duration: 0.4s;
     }
-  }
-  .close {
-    color: white;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .modal-header {
-    padding: 2px 16px;
-    background-color: #9C27B0;
-    color: white;
-  }
-  
-  .modal-body {
-    padding: 2px 16px;
-  }
-  
-  .modal-footer {
-    padding: 2px 16px;
-    background-color: #9C27B0;
-    color: white;
-  }
+    @keyframes animatetop {
+      from {
+        top: -300px;
+        opacity: 0;
+      }
+      to {
+        top: 0;
+        opacity: 1;
+      }
+    }
+    &__close {
+      color: white;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      &:hover{
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      &:focus{
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+    &__header {
+      padding: 2px 16px;
+      background-color: #9C27B0;
+      color: white;
+    }
 
+    &__body {
+      padding: 2px 16px;
+    }
 
-  #menu {
-    z-index: 2;
-    
-  }
-  
-  #menu-bar {
+    &__footer {
+      padding: 2px 16px;
+      background-color: #9C27B0;
+      color: white;
+    }
+}
+
+.menu{
+  z-index: 2;
+
+  &__box {
     width: 45px;
     height: 40px;
     margin: 30px 0 20px 20px;
     cursor: pointer;
   }
   
-  .bar {
+  &__bar {
     height: 5px;
     width: 100%;
     display: block;
     border-radius: 5px;
     transition: 0.3s ease;
+    &-1{
+      transform: translateY(-4px);
+      background-color:#F465FE ;
+    }
+    &-2{
+      background-color:#0095FF ;
+    }
+    &-3{
+      transform: translateY(4px);
+      background-color:#009929 ;
+    }
   }
-  
-  #bar1 {
-    transform: translateY(-4px);
-    background-color:#F465FE ;
-  }
-  #bar2 {
-    background-color:#0095FF ;
-  }
-  #bar3 {
-    transform: translateY(4px);
-    background-color:#009929 ;
-  }
-  
-  .nav {
+  &__nav{
     transition: 0.3s ease;
     display: none;
   }
   
-  .nav ul {
+  &__list{
     padding: 0 22px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
   
-  .nav a {
+  &__link{
     list-style: none;
     padding: 12px 0;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    &:hover{
+      font-weight: bold;
+    }
   }
-  .nav button {
+  &__map{
     padding: 12px 0;
     color: white;
     font-size: 20px;
     text-decoration: none;
+    &:hover{
+      font-weight: bold;
+    }
   }  
-  .nav button:hover {
-    font-weight: bold;
+  &__change{
+    display: block;
+    & .menu__bar{
+      background-color: white;
+      &-1{
+        transform: translateY(4px) rotateZ(-1125deg);
+      }
+      &-2{
+        opacity: 0;
+      }
+      &-3{
+        transform: translateY(-6px) rotateZ(1125deg);
+      }
+    }
   }
-  
-  .nav a {
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
-  }
-  
-  .nav a:hover {
-    font-weight: bold;
-  }
-  
+}
   .menu-bg, #menu {
     top: 0;
     left: 0;
     position: fixed;
 
   }
-  
   .menu-bg {
     z-index: 1;
     width: 0;
     height: 0;
     margin: 30px 0 20px 20px;
-    background: radial-gradient(circle, #009929, #0095FF, #F465FE, #FCD000);
+    background: radial-gradient(circle,#0095FF, #F465FE, #FCD000, #FCD000);
     border-radius: 50%;
     transition: 0.3s ease;
-  }
-  
-  .change {
-    display: block;
-  }
-  
-  .change .bar {
-    background-color: white;
-  }
-  
-  .change #bar1 {
-    transform: translateY(4px) rotateZ(-1125deg);
-  }
-  
-  .change #bar2 {
-    opacity: 0;
-  }
-  
-  .change #bar3 {
-    transform: translateY(-6px) rotateZ(1125deg);
-  }
-  
+  }   
   .change-bg {
     width: 520px;
     height: 460px;
@@ -555,7 +542,7 @@ body{
     border: none;
   }
   
-  .modalu {
+.modalu {
     display: none; 
     position: fixed; 
     z-index: 4; 
@@ -567,11 +554,11 @@ body{
     overflow: auto; 
     background-color: rgb(0, 0, 0); 
     background-color: rgba(0, 0, 0, 0.4); 
-  }
-  .modalu-text{
+  
+  &__text{
     text-align: center;
   }
-  .modalu-content {
+  &__content {
     position: relative;
     margin: auto;
     padding: 0;
@@ -593,36 +580,36 @@ body{
       opacity: 1;
     }
   }
-  .closeu {
+  &__close {
     color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .closeu:hover,
-  .closeu:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .modalu-header {
+    &:hover{
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    &:focus{
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }  
+  &__header {
     padding: 2px 16px;
     background-color: #9C27B0;
     color: white;
   }
-  
-  .modalu-body {
+  &__body {
     padding: 2px 16px;
   }
-  
-  .modalu-footer {
+  &__footer {
     padding: 2px 16px;
     background-color: #9C27B0;
     color: white;
   }
-
+}
 
   #slider__slides{
     position: relative;
@@ -648,6 +635,22 @@ body{
       display: flex;
       flex-direction: column;
       box-shadow: 0px 0px 15px 30px rgba(34, 60, 80, 0.2);
+      &:nth-of-type(1){
+        background: url('../img/1scroll\ \(1\).png') no-repeat center center / cover;
+      }
+      &:nth-of-type(2){
+        background:url('../img/2scroll\ \(1\).png') no-repeat center center / cover;
+      }
+      &:nth-of-type(3){
+        background:url('../img/3scroll\ \(1\).png') no-repeat center center / cover;
+      }
+      &:nth-of-type(4){
+        background:url('../img/4scroll\ \(1\).png') no-repeat center center / cover;
+      }
+      &:nth-of-type(5){
+        background:url('../img/5scroll\ \(1\).png') no-repeat center center / cover;
+      }
+  
     }
     
     & .showing{
@@ -682,31 +685,17 @@ body{
       margin-left: 70px;
       
     }
-  }
+}
   
-  .slider__slide:nth-of-type(1){
-    background: url('../img/1scroll\ \(1\).png') no-repeat center center / cover;
-  }
-  .slider__slide:nth-of-type(2){
-    background:url('../img/2scroll\ \(1\).png') no-repeat center center / cover;
-  }
-  .slider__slide:nth-of-type(3){
-    background:url('../img/3scroll\ \(1\).png') no-repeat center center / cover;
-  }
-  .slider__slide:nth-of-type(4){
-    background:url('../img/4scroll\ \(1\).png') no-repeat center center / cover;
-  }
-  .slider__slide:nth-of-type(5){
-    background:url('../img/5scroll\ \(1\).png') no-repeat center center / cover;
-  }
+
   
   
   #sliderMap {
     cursor: pointer;
     border: none;
   }
-  
-  .modals {
+
+.modals {
     display: none; 
     position: fixed; 
     z-index: 4; 
@@ -718,11 +707,11 @@ body{
     overflow: auto; 
     background-color: rgb(0, 0, 0); 
     background-color: rgba(0, 0, 0, 0.4); 
-  }
-  .modals-text{
+
+  &__text{
     text-align: center;
   }
-  .modals-content {
+  &__content {
     position: relative;
     margin: auto;
     padding: 0;
@@ -744,35 +733,38 @@ body{
       opacity: 1;
     }
   }
-  .closes {
+  &__close {
     color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .closes:hover,
-  .closes:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .modals-header {
+    &:hover{
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    &:focus{
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }  
+  &__header {
     padding: 2px 16px;
     background-color: #9C27B0;
     color: white;
   }
   
-  .modals-body {
+  &__body {
     padding: 2px 16px;
   }
   
-  .modals-footer {
+  &__footer {
     padding: 2px 16px;
     background-color: #9C27B0;
     color: white;
   }
+}
 .ways{
   margin-top: 20px;
   
