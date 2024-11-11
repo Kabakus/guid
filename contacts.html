@@ -31,10 +31,10 @@
                     <div id="myModal" class="modal">
   
    
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <span class="close">&times;</span>
-                            <h2 class="modal-text">Ищите нас тут</h2>
+                        <div class="modal__content">
+                          <div class="modal__header">
+                            <span class="modal__close">&times;</span>
+                            <h2 class="modal__text">Ищите нас тут</h2>
                           </div>
                           <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acd65e83d8227397afa4d2e0dd27757196e91a0afb8261872c9050fa8e4e88539&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
                         </div>
@@ -115,41 +115,32 @@
             </div>
         </div>
     </section>
-    <div id="menu">
-        <div id="menu-bar" onclick="menuOnClick()">
-          <div id="bar1" class="bar"></div>
-          <div id="bar2" class="bar"></div>
-          <div id="bar3" class="bar"></div>
+    <div id="menu" class="menu">
+        <div class="menu__box" id="menu-bar" onclick="menuOnClick()">
+          <div id="bar1" class="menu__bar menu__bar-1 bar"></div>
+          <div id="bar2" class="menu__bar menu__bar-2 bar"></div>
+          <div id="bar3" class="menu__bar menu__bar-3 bar"></div>
         </div>
-        <nav class="nav" id="nav">
-          <ul>
-            <a href="./main.html">На главную</a>
-            <a href="./contacts.html">Контакты</a>
-            <a href="./main.html#questions">Вопросы</a>
-            <button id="myBtnu">Карта</button>
+        <nav class="menu__nav nav" id="nav">
+          <ul class="menu__list">
+            <a class="menu__link" href="./main.html">На главную</a>
+            <a class="menu__link" href="./contacts.html">Контакты</a>
+            <a class="menu__link" href="#questions">Вопросы</a>
+            <button class="menu__map" id="myBtnu">Карта</button>
           </ul>
         </nav> 
-    </div>
-      
+    </div> 
     <div class="menu-bg" id="menu-bg"></div>
-    <div id="myModalu" class="modal">
-  
-   
-        <div class="modalu-content">
-          <div class="modalu-header">
-            <span class="closeu">&times;</span>
-            <h2 class="modalu-text">Ищите нас тут</h2>
+
+    <div id="myModalu" class="modalu">
+        <div class="modalu__content">
+          <div class="modalu__header">
+            <span class="modalu__close">&times;</span>
+            <h2 class="modalu__text">Ищите нас тут</h2>
           </div>
           <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acd65e83d8227397afa4d2e0dd27757196e91a0afb8261872c9050fa8e4e88539&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
-        </div>
-      
-      </div>
-      
+        </div>     
     </div>
-
-
-
-
 
     <section class="cont">
         <div class="container">

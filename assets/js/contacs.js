@@ -5,7 +5,7 @@ var btn = document.getElementById("myBtn");
 
 
 
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("modal__close")[0];
 
 
 
@@ -98,30 +98,40 @@ btncl.onclick = function() {
 }
 
 
-
 function menuOnClick() {
-    document.getElementById("menu-bar").classList.toggle("change");
-    document.getElementById("nav").classList.toggle("change");
+    document.getElementById("menu-bar").classList.toggle("menu__change");
+    document.getElementById("nav").classList.toggle("menu__change");
     document.getElementById("menu-bg").classList.toggle("change-bg");
-  }
+}
+
+var modalu = document.getElementById('myModalu');
 
 
-  var modalu = document.getElementById('myModalu');
+var btnu = document.getElementById("myBtnu");
 
 
-  var btnu = document.getElementById("myBtnu");
-  
-  
-  
-  var spanu = document.getElementsByClassName("closeu")[0];
-  
-  
-  
-  btnu.onclick = function() {
-      modalu.style.display = "block";
-      
-  }
-  
+
+var spanu = document.getElementsByClassName("modalu__close")[0];
+
+
+
+btnu.onclick = function() {
+    modalu.style.display = "block";
+    
+}
+
+
+
+spanu.onclick = function() {
+    modalu.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+    if (event.target == modalu) {
+        modalu.style.display = "none";
+    }
+}
   
   
   spanu.onclick = function() {
