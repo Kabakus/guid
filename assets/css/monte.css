@@ -377,12 +377,10 @@ body {
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
 }
-
-.modal-text {
+.modal__text {
   text-align: center;
 }
-
-.modal-content {
+.modal__content {
   position: relative;
   margin: auto;
   padding: 0;
@@ -394,7 +392,6 @@ body {
   animation-name: animatetop;
   animation-duration: 0.4s;
 }
-
 @keyframes animatetop {
   from {
     top: -300px;
@@ -405,105 +402,106 @@ body {
     opacity: 1;
   }
 }
-.close {
+.modal__close {
   color: white;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
-
-.close:hover,
-.close:focus {
+.modal__close:hover {
   color: #000;
   text-decoration: none;
   cursor: pointer;
 }
-
-.modal-header {
+.modal__close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal__header {
+  padding: 2px 16px;
+  background-color: #9C27B0;
+  color: white;
+}
+.modal__body {
+  padding: 2px 16px;
+}
+.modal__footer {
   padding: 2px 16px;
   background-color: #9C27B0;
   color: white;
 }
 
-.modal-body {
-  padding: 2px 16px;
-}
-
-.modal-footer {
-  padding: 2px 16px;
-  background-color: #9C27B0;
-  color: white;
-}
-
-#menu {
+.menu {
   z-index: 2;
 }
-
-#menu-bar {
+.menu__box {
   width: 45px;
   height: 40px;
   margin: 30px 0 20px 20px;
   cursor: pointer;
 }
-
-.bar {
+.menu__bar {
   height: 5px;
   width: 100%;
   display: block;
   border-radius: 5px;
   transition: 0.3s ease;
 }
-
-#bar1 {
+.menu__bar-1 {
   transform: translateY(-4px);
   background-color: #F465FE;
 }
-
-#bar2 {
+.menu__bar-2 {
   background-color: #0095FF;
 }
-
-#bar3 {
+.menu__bar-3 {
   transform: translateY(4px);
   background-color: #009929;
 }
-
-.nav {
+.menu__nav {
   transition: 0.3s ease;
   display: none;
 }
-
-.nav ul {
+.menu__list {
   padding: 0 22px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-
-.nav a {
+.menu__link {
   list-style: none;
   padding: 12px 0;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
 }
-
-.nav button {
+.menu__link:hover {
+  font-weight: bold;
+}
+.menu__map {
   padding: 12px 0;
   color: white;
   font-size: 20px;
   text-decoration: none;
 }
-
-.nav button:hover {
+.menu__map:hover {
   font-weight: bold;
 }
-
-.nav a {
-  color: white;
-  font-size: 20px;
-  text-decoration: none;
+.menu__change {
+  display: block;
 }
-
-.nav a:hover {
-  font-weight: bold;
+.menu__change .menu__bar {
+  background-color: white;
+}
+.menu__change .menu__bar-1 {
+  transform: translateY(4px) rotateZ(-1125deg);
+}
+.menu__change .menu__bar-2 {
+  opacity: 0;
+}
+.menu__change .menu__bar-3 {
+  transform: translateY(-6px) rotateZ(1125deg);
 }
 
 .menu-bg, #menu {
@@ -517,29 +515,9 @@ body {
   width: 0;
   height: 0;
   margin: 30px 0 20px 20px;
-  background: radial-gradient(circle, #009929, #0095FF, #F465FE, #FCD000);
+  background: radial-gradient(circle, #0095FF, #F465FE, #FCD000, #FCD000);
   border-radius: 50%;
   transition: 0.3s ease;
-}
-
-.change {
-  display: block;
-}
-
-.change .bar {
-  background-color: white;
-}
-
-.change #bar1 {
-  transform: translateY(4px) rotateZ(-1125deg);
-}
-
-.change #bar2 {
-  opacity: 0;
-}
-
-.change #bar3 {
-  transform: translateY(-6px) rotateZ(1125deg);
 }
 
 .change-bg {
@@ -567,12 +545,10 @@ body {
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
 }
-
-.modalu-text {
+.modalu__text {
   text-align: center;
 }
-
-.modalu-content {
+.modalu__content {
   position: relative;
   margin: auto;
   padding: 0;
@@ -584,7 +560,6 @@ body {
   animation-name: animatetop;
   animation-duration: 0.4s;
 }
-
 @keyframes animatetop {
   from {
     top: -300px;
@@ -595,31 +570,31 @@ body {
     opacity: 1;
   }
 }
-.closeu {
+.modalu__close {
   color: white;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
-
-.closeu:hover,
-.closeu:focus {
+.modalu__close:hover {
   color: #000;
   text-decoration: none;
   cursor: pointer;
 }
-
-.modalu-header {
+.modalu__close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modalu__header {
   padding: 2px 16px;
   background-color: #9C27B0;
   color: white;
 }
-
-.modalu-body {
+.modalu__body {
   padding: 2px 16px;
 }
-
-.modalu-footer {
+.modalu__footer {
   padding: 2px 16px;
   background-color: #9C27B0;
   color: white;
