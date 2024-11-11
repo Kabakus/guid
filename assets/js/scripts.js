@@ -27,6 +27,11 @@ window.onclick = function(event) {
 
 
 
+var attention = document.getElementById('attention')
+
+attention.onclick = function(event){
+    alert('Написано же недоступно')
+}
 
 
 

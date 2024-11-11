@@ -735,6 +735,10 @@ body {
 .ways {
   margin-top: 20px;
 }
+.ways #attention {
+  background: none;
+  border: none;
+}
 .ways__title {
   font-weight: 800;
   font-size: 64px;

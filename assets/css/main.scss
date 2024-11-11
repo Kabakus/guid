@@ -765,10 +765,15 @@ body{
     color: white;
   }
 }
+
+
 .ways{
   margin-top: 20px;
   
-
+  #attention{
+    background: none;
+    border: none;
+  }
   &__title{
     font-weight: 800;
     font-size: 64px;
