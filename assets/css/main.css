@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: Rubik;
+  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -41,6 +42,10 @@ li {
 body {
   background: url("../img/BG.png");
   background-attachment: fixed;
+}
+
+.mapy {
+  border-top: 5px solid #2E0057;
 }
 
 .body {
@@ -368,13 +373,18 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
 }
 .modal__text {
+  color: #2E0057;
+  font-weight: 800;
+  font-size: 64px;
   text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .modal__content {
   position: relative;
   margin: auto;
   padding: 0;
-  border: 5px solid #7B1FA2;
+  border: 5px solid #2E0057;
+  background-color: #F5F5DC;
   width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
@@ -410,7 +420,7 @@ body {
 }
 .modal__header {
   padding: 2px 16px;
-  background-color: #9C27B0;
+  background-color: #F5F5DC;
   color: white;
 }
 .modal__body {
@@ -536,13 +546,19 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
 }
 .modalu__text {
+  color: #2E0057;
+  font-weight: 800;
+  font-size: 64px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
   text-align: center;
 }
 .modalu__content {
   position: relative;
   margin: auto;
   padding: 0;
-  border: 5px solid #7B1FA2;
+  border: 5px solid #2E0057;
+  background-color: #F5F5DC;
   width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
@@ -578,7 +594,7 @@ body {
 }
 .modalu__header {
   padding: 2px 16px;
-  background-color: #9C27B0;
+  background-color: #F5F5DC;
   color: white;
 }
 .modalu__body {
@@ -678,13 +694,19 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
 }
 .modals__text {
+  color: #2E0057;
+  font-weight: 800;
+  font-size: 64px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
   text-align: center;
 }
 .modals__content {
   position: relative;
   margin: auto;
   padding: 0;
-  border: 5px solid #7B1FA2;
+  border: 5px solid #2E0057;
+  background-color: #F5F5DC;
   width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
@@ -720,7 +742,7 @@ body {
 }
 .modals__header {
   padding: 2px 16px;
-  background-color: #9C27B0;
+  background-color: #F5F5DC;
   color: white;
 }
 .modals__body {
@@ -895,8 +917,8 @@ body {
 .modalex__text {
   text-align: center;
   color: #2E0057;
-  font-weight: 700;
-  font-size: 40px;
+  font-weight: 800;
+  font-size: 60px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   margin-bottom: 15px;
 }
@@ -904,7 +926,8 @@ body {
   position: relative;
   margin: auto;
   padding: 0;
-  border: 5px solid #7B1FA2;
+  border: 5px solid #2E0057;
+  background-color: #F5F5DC;
   width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
@@ -940,14 +963,14 @@ body {
 }
 .modalex__header {
   padding: 2px 16px;
-  background-color: #9C27B0;
+  background-color: #F5F5DC;
   color: white;
 }
 .modalex__box {
   display: flex;
   flex-direction: column;
   padding: 2px 16px;
-  background-color: #bb45d0;
+  background-color: #F5F5DC;
   align-items: center;
 }
 .modalex__input {
@@ -1088,7 +1111,7 @@ body {
 }
 .about__header {
   padding: 2px 16px;
-  background-color: #9C27B0;
+  background-color: #F5F5DC;
   color: white;
 }
 .about__body {
@@ -1117,7 +1140,8 @@ body {
   position: relative;
   margin: auto;
   padding: 0;
-  border: 5px solid #7B1FA2;
+  border: 5px solid #2E0057;
+  background-color: #F5F5DC;
   width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
@@ -1170,7 +1194,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 2px 16px;
-  background-color: #9C27B0;
+  background-color: #F5F5DC;
   color: white;
 }
 .support__title {
@@ -1188,7 +1212,8 @@ body {
   position: relative;
   margin: auto;
   padding: 0;
-  border: 5px solid #7B1FA2;
+  border: 5px solid #2E0057;
+  background-color: #F5F5DC;
   width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;

@@ -1,3 +1,5 @@
+'use strict';
+
 var modal = document.getElementById('myModal');
 
 
@@ -109,77 +111,77 @@ function menuOnClick() {
 }
 
 
-  var modalu = document.getElementById('myModalu');
+var modalu = document.getElementById('myModalu');
 
 
-  var btnu = document.getElementById("myBtnu");
-  
-  
-  
-  var spanu = document.getElementsByClassName("modalu__close")[0];
-  
-  
-  
-  btnu.onclick = function() {
-      modalu.style.display = "block";
-      
-  }
-  
-  
-  
-  spanu.onclick = function() {
-      modalu.style.display = "none";
-  }
-  
-  
-  window.onclick = function(event) {
-      if (event.target == modalu) {
-          modalu.style.display = "none";
-      }
-  }
-  
+var btnu = document.getElementById("myBtnu");
 
 
-  var slides = document.querySelectorAll('#slider__slides .slider__slide');
-  var currentSlide = 0;
-  var slideInterval = setInterval(nextSlide,4000);
-  
-  function nextSlide(){
-    slides[currentSlide].className = 'slider__slide';
-    currentSlide = (currentSlide+1)%slides.length;
-    slides[currentSlide].className = 'slider__slide showing';
-  }
 
-  var modalm = document.getElementById('myModals');
+var spanu = document.getElementsByClassName("modalu__close")[0];
 
 
-  var btnm = document.getElementById("sliderMap");
-  
-  
-  
-  var spanm = document.getElementsByClassName("modals__close")[0];
-  
-  
-  
-  btnm.onclick = function() {
-    modalm.style.display = "block";
-      
-  }
-  
-  
-  
-  spanm.onclick = function() {
+
+btnu.onclick = function() {
+    modalu.style.display = "block";
+    
+}
+
+
+
+spanu.onclick = function() {
+    modalu.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+    if (event.target == modalu) {
+        modalu.style.display = "none";
+    }
+}
+
+
+
+var slides = document.querySelectorAll('#slider__slides .slider__slide');
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide,4000);
+
+function nextSlide(){
+slides[currentSlide].className = 'slider__slide';
+currentSlide = (currentSlide+1)%slides.length;
+slides[currentSlide].className = 'slider__slide showing';
+}
+
+var modalm = document.getElementById('myModals');
+
+
+var btnm = document.getElementById("sliderMap");
+
+
+
+var spanm = document.getElementsByClassName("modals__close")[0];
+
+
+
+btnm.onclick = function() {
+modalm.style.display = "block";
+    
+}
+
+
+
+spanm.onclick = function() {
+modalm.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+    if (event.target == modalm) {
     modalm.style.display = "none";
-  }
-  
-  
-  window.onclick = function(event) {
-      if (event.target == modalm) {
-        modalm.style.display = "none";
-      }
-  }
+    }
+}
 
-  
+
 
 
 
