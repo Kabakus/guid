@@ -414,10 +414,14 @@ body{
       }
     }
     &__close {
-      color: white;
+      color: #2E0057;
       float: right;
-      font-size: 28px;
+      font-size: 35px;
       font-weight: bold;
+      top: -10px;
+      right: 0px;
+      position: absolute;
+      cursor: pointer;
       &:hover{
         color: #000;
         text-decoration: none;
@@ -596,10 +600,14 @@ body{
     }
   }
   &__close {
-    color: white;
+    color: #2E0057;
     float: right;
-    font-size: 28px;
+    font-size: 35px;
     font-weight: bold;
+    top: -10px;
+    right: 0px;
+    position: absolute;
+    cursor: pointer;
     &:hover{
       color: #000;
       text-decoration: none;
@@ -756,10 +764,14 @@ body{
     }
   }
   &__close {
-    color: white;
+    color: #2E0057;
     float: right;
-    font-size: 28px;
+    font-size: 35px;
     font-weight: bold;
+    top: -10px;
+    right: 0px;
+    position: absolute;
+    cursor: pointer;
     &:hover{
       color: #000;
       text-decoration: none;
@@ -990,8 +1002,12 @@ body{
   &__closex {
     color: #2E0057;
     float: right;
-    font-size: 28px;
+    font-size: 35px;
     font-weight: bold;
+    top: -10px;
+    right: 0px;
+    position: absolute;
+    cursor: pointer;
     &:hover{
       color: #000;
       text-decoration: none;
@@ -1211,8 +1227,12 @@ body{
   &__closex {
     color: #2E0057;
     float: right;
-    font-size: 28px;
+    font-size: 35px;
     font-weight: bold;
+    top: -10px;
+    right: 0px;
+    position: absolute;
+    cursor: pointer;
     &:hover{
       color: #000;
       text-decoration: none;
@@ -1283,9 +1303,12 @@ body{
   &__closex {
     color: #2E0057;
     float: right;
-    font-size: 28px;
+    font-size: 35px;
     font-weight: bold;
-    align-self: flex-end;
+    top: -10px;
+    right: 0px;
+    position: absolute;
+    cursor: pointer;
     &:hover{
       color: #000;
       text-decoration: none;

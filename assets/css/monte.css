@@ -378,13 +378,18 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
 }
 .modal__text {
+  color: #2E0057;
+  font-weight: 800;
+  font-size: 64px;
   text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .modal__content {
   position: relative;
   margin: auto;
   padding: 0;
-  border: 5px solid #7B1FA2;
+  border: 5px solid #2E0057;
+  background-color: #F5F5DC;
   width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
@@ -403,10 +408,14 @@ body {
   }
 }
 .modal__close {
-  color: white;
+  color: #2E0057;
   float: right;
-  font-size: 28px;
+  font-size: 35px;
   font-weight: bold;
+  top: -10px;
+  right: 0px;
+  position: absolute;
+  cursor: pointer;
 }
 .modal__close:hover {
   color: #000;
@@ -420,7 +429,6 @@ body {
 }
 .modal__header {
   padding: 2px 16px;
-  background-color: #9C27B0;
   color: white;
 }
 .modal__body {
@@ -428,7 +436,6 @@ body {
 }
 .modal__footer {
   padding: 2px 16px;
-  background-color: #9C27B0;
   color: white;
 }
 
@@ -546,13 +553,18 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
 }
 .modalu__text {
+  color: #2E0057;
+  font-weight: 800;
+  font-size: 64px;
   text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .modalu__content {
   position: relative;
   margin: auto;
   padding: 0;
-  border: 5px solid #7B1FA2;
+  border: 5px solid #2E0057;
+  background-color: #F5F5DC;
   width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
@@ -571,10 +583,14 @@ body {
   }
 }
 .modalu__close {
-  color: white;
+  color: #2E0057;
   float: right;
-  font-size: 28px;
+  font-size: 35px;
   font-weight: bold;
+  top: -10px;
+  right: 0px;
+  position: absolute;
+  cursor: pointer;
 }
 .modalu__close:hover {
   color: #000;
@@ -588,7 +604,6 @@ body {
 }
 .modalu__header {
   padding: 2px 16px;
-  background-color: #9C27B0;
   color: white;
 }
 .modalu__body {
@@ -596,7 +611,6 @@ body {
 }
 .modalu__footer {
   padding: 2px 16px;
-  background-color: #9C27B0;
   color: white;
 }
 
@@ -659,14 +673,21 @@ body {
 }
 .place__searcher {
   margin-top: 60px;
+  margin-left: 30PX;
   font-weight: 600;
   font-size: 28px;
   border-radius: 10px;
   border: none;
-  background-color: #FCD000;
+  background-color: orange;
   color: #2E0057;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.place__searcher::-moz-placeholder {
+  color: #2E0057;
+}
+.place__searcher::placeholder {
+  color: #2E0057;
 }
 .place__grid-el {
   margin-top: 80px;
@@ -680,8 +701,10 @@ body {
 .place__png {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   border-radius: 40px;
+  height: 383px;
 }
 .place__subtitle {
+  color: ORANGE;
   text-align: center;
   font-weight: 800;
   font-size: 48px;
@@ -807,8 +830,12 @@ body {
 .about__closex {
   color: #2E0057;
   float: right;
-  font-size: 28px;
+  font-size: 35px;
   font-weight: bold;
+  top: -10px;
+  right: 0px;
+  position: absolute;
+  cursor: pointer;
 }
 .about__closex:hover {
   color: #000;
@@ -839,8 +866,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 2px 16px;
-  background-color: #9C27B0;
-  color: white;
+  color: #2E0057;
 }
 .support__title {
   text-align: center;
@@ -857,7 +883,8 @@ body {
   position: relative;
   margin: auto;
   padding: 0;
-  border: 5px solid #7B1FA2;
+  border: 5px solid #2E0057;
+  background-color: #F5F5DC;
   width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
@@ -878,9 +905,12 @@ body {
 .support__closex {
   color: #2E0057;
   float: right;
-  font-size: 28px;
+  font-size: 35px;
   font-weight: bold;
-  align-self: flex-end;
+  top: -10px;
+  right: 0px;
+  position: absolute;
+  cursor: pointer;
 }
 .support__closex:hover {
   color: #000;
@@ -891,6 +921,43 @@ body {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.page-item {
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+  padding: 10px 15px;
+  border: 1px solid orange;
+  color: orange;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.page-item.active {
+  background-color: orange;
+  color: white;
+}
+.page-item:hover {
+  background-color: #ffe5b4;
+  color: white;
 }
 
 .monte1 {
@@ -923,12 +990,11 @@ body {
   margin-bottom: 15px;
 }
 .monte1__text {
-  text-align: center;
   color: #2E0057;
-  font-weight: 700;
-  font-size: 28px;
+  font-weight: 800;
+  font-size: 64px;
+  text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  margin-bottom: 15px;
 }
 .monte1__img {
   margin: 0px 20px 20px 20px;
@@ -958,9 +1024,12 @@ body {
 .monte1__closex {
   color: #2E0057;
   float: right;
-  font-size: 28px;
+  font-size: 35px;
   font-weight: bold;
-  align-self: flex-end;
+  top: -10px;
+  right: 0px;
+  position: absolute;
+  cursor: pointer;
 }
 .monte1__closex:hover {
   color: #000;
@@ -1003,12 +1072,11 @@ body {
   margin-bottom: 15px;
 }
 .monte2__text {
-  text-align: center;
   color: #2E0057;
-  font-weight: 700;
-  font-size: 28px;
+  font-weight: 800;
+  font-size: 64px;
+  text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  margin-bottom: 15px;
 }
 .monte2__img {
   margin: 0px 20px 20px 20px;
@@ -1038,9 +1106,12 @@ body {
 .monte2__closex {
   color: #2E0057;
   float: right;
-  font-size: 28px;
+  font-size: 35px;
   font-weight: bold;
-  align-self: flex-end;
+  top: -10px;
+  right: 0px;
+  position: absolute;
+  cursor: pointer;
 }
 .monte2__closex:hover {
   color: #000;
@@ -1083,12 +1154,11 @@ body {
   margin-bottom: 15px;
 }
 .monte3__text {
-  text-align: center;
   color: #2E0057;
-  font-weight: 700;
-  font-size: 28px;
+  font-weight: 800;
+  font-size: 64px;
+  text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  margin-bottom: 15px;
 }
 .monte3__img {
   margin: 0px 20px 20px 20px;
@@ -1118,9 +1188,12 @@ body {
 .monte3__closex {
   color: #2E0057;
   float: right;
-  font-size: 28px;
+  font-size: 35px;
   font-weight: bold;
-  align-self: flex-end;
+  top: -10px;
+  right: 0px;
+  position: absolute;
+  cursor: pointer;
 }
 .monte3__closex:hover {
   color: #000;
@@ -1163,12 +1236,11 @@ body {
   margin-bottom: 15px;
 }
 .monte4__text {
-  text-align: center;
   color: #2E0057;
-  font-weight: 700;
-  font-size: 28px;
+  font-weight: 800;
+  font-size: 64px;
+  text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  margin-bottom: 15px;
 }
 .monte4__img {
   margin: 0px 20px 20px 20px;
@@ -1198,9 +1270,12 @@ body {
 .monte4__closex {
   color: #2E0057;
   float: right;
-  font-size: 28px;
+  font-size: 35px;
   font-weight: bold;
-  align-self: flex-end;
+  top: -10px;
+  right: 0px;
+  position: absolute;
+  cursor: pointer;
 }
 .monte4__closex:hover {
   color: #000;
@@ -1243,12 +1318,11 @@ body {
   margin-bottom: 15px;
 }
 .monte5__text {
-  text-align: center;
   color: #2E0057;
-  font-weight: 700;
-  font-size: 28px;
+  font-weight: 800;
+  font-size: 64px;
+  text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  margin-bottom: 15px;
 }
 .monte5__img {
   margin: 0px 20px 20px 20px;
@@ -1278,9 +1352,12 @@ body {
 .monte5__closex {
   color: #2E0057;
   float: right;
-  font-size: 28px;
+  font-size: 35px;
   font-weight: bold;
-  align-self: flex-end;
+  top: -10px;
+  right: 0px;
+  position: absolute;
+  cursor: pointer;
 }
 .monte5__closex:hover {
   color: #000;
@@ -1323,12 +1400,11 @@ body {
   margin-bottom: 15px;
 }
 .monte6__text {
-  text-align: center;
   color: #2E0057;
-  font-weight: 700;
-  font-size: 28px;
+  font-weight: 800;
+  font-size: 64px;
+  text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  margin-bottom: 15px;
 }
 .monte6__img {
   margin: 0px 20px 20px 20px;
@@ -1358,9 +1434,12 @@ body {
 .monte6__closex {
   color: #2E0057;
   float: right;
-  font-size: 28px;
+  font-size: 35px;
   font-weight: bold;
-  align-self: flex-end;
+  top: -10px;
+  right: 0px;
+  position: absolute;
+  cursor: pointer;
 }
 .monte6__closex:hover {
   color: #000;
@@ -1403,12 +1482,11 @@ body {
   margin-bottom: 15px;
 }
 .monte7__text {
-  text-align: center;
   color: #2E0057;
-  font-weight: 700;
-  font-size: 28px;
+  font-weight: 800;
+  font-size: 64px;
+  text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  margin-bottom: 15px;
 }
 .monte7__img {
   margin: 0px 20px 20px 20px;
@@ -1438,9 +1516,12 @@ body {
 .monte7__closex {
   color: #2E0057;
   float: right;
-  font-size: 28px;
+  font-size: 35px;
   font-weight: bold;
-  align-self: flex-end;
+  top: -10px;
+  right: 0px;
+  position: absolute;
+  cursor: pointer;
 }
 .monte7__closex:hover {
   color: #000;
