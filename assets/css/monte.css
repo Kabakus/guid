@@ -56,7 +56,7 @@ body {
   height: 1100px;
   padding-top: 50px;
   background: url("../img/monte.png") no-repeat center center/cover;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.5);
 }
 .header__wrapper {
   display: flex;
@@ -653,7 +653,7 @@ body {
   height: 800px;
   margin-top: 200px;
   background: url("../img/monte-3.png") no-repeat center center/cover;
-  box-shadow: 0px 0px 100px 40px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 0px 60px 30px rgba(0, 0, 0, 0.5);
 }
 
 .place {
@@ -809,7 +809,8 @@ body {
   position: relative;
   margin: auto;
   padding: 0;
-  border: 5px solid #7B1FA2;
+  border: 5px solid #2E0057;
+  background-color: #F5F5DC;
   width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
@@ -978,7 +979,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 2px 16px;
-  background-color: #9C27B0;
+  background-color: #F5F5DC;
   color: white;
 }
 .monte1__title {
@@ -998,12 +999,14 @@ body {
 }
 .monte1__img {
   margin: 0px 20px 20px 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 .monte1__content {
   position: relative;
   margin: auto;
   padding: 0;
-  border: 5px solid #7B1FA2;
+  border: 5px solid #2E0057;
+  background-color: #F5F5DC;
   width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
@@ -1060,7 +1063,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 2px 16px;
-  background-color: #9C27B0;
+  background-color: #F5F5DC;
   color: white;
 }
 .monte2__title {
@@ -1080,12 +1083,14 @@ body {
 }
 .monte2__img {
   margin: 0px 20px 20px 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 .monte2__content {
   position: relative;
   margin: auto;
   padding: 0;
-  border: 5px solid #7B1FA2;
+  border: 5px solid #2E0057;
+  background-color: #F5F5DC;
   width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
@@ -1142,7 +1147,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 2px 16px;
-  background-color: #9C27B0;
+  background-color: #F5F5DC;
   color: white;
 }
 .monte3__title {
@@ -1162,12 +1167,14 @@ body {
 }
 .monte3__img {
   margin: 0px 20px 20px 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 .monte3__content {
   position: relative;
   margin: auto;
   padding: 0;
-  border: 5px solid #7B1FA2;
+  border: 5px solid #2E0057;
+  background-color: #F5F5DC;
   width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
@@ -1224,7 +1231,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 2px 16px;
-  background-color: #9C27B0;
+  background-color: #F5F5DC;
   color: white;
 }
 .monte4__title {
@@ -1244,12 +1251,14 @@ body {
 }
 .monte4__img {
   margin: 0px 20px 20px 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 .monte4__content {
   position: relative;
   margin: auto;
   padding: 0;
-  border: 5px solid #7B1FA2;
+  border: 5px solid #2E0057;
+  background-color: #F5F5DC;
   width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
@@ -1306,7 +1315,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 2px 16px;
-  background-color: #9C27B0;
+  background-color: #F5F5DC;
   color: white;
 }
 .monte5__title {
@@ -1331,7 +1340,8 @@ body {
   position: relative;
   margin: auto;
   padding: 0;
-  border: 5px solid #7B1FA2;
+  border: 5px solid #2E0057;
+  background-color: #F5F5DC;
   width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
@@ -1388,7 +1398,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 2px 16px;
-  background-color: #9C27B0;
+  background-color: #F5F5DC;
   color: white;
 }
 .monte6__title {
@@ -1413,7 +1423,8 @@ body {
   position: relative;
   margin: auto;
   padding: 0;
-  border: 5px solid #7B1FA2;
+  border: 5px solid #2E0057;
+  background-color: #F5F5DC;
   width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
@@ -1470,7 +1481,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 2px 16px;
-  background-color: #9C27B0;
+  background-color: #F5F5DC;
   color: white;
 }
 .monte7__title {
@@ -1495,7 +1506,8 @@ body {
   position: relative;
   margin: auto;
   padding: 0;
-  border: 5px solid #7B1FA2;
+  border: 5px solid #2E0057;
+  background-color: #F5F5DC;
   width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
