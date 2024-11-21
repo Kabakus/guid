@@ -710,6 +710,18 @@ body {
   font-size: 48px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
+.place__sort {
+  margin-top: 25px;
+  margin-left: 30PX;
+  font-weight: 600;
+  font-size: 28px;
+  border-radius: 10px;
+  border: none;
+  background-color: orange;
+  color: #2E0057;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
 
 .foot {
   margin-top: 300px;
@@ -780,15 +792,10 @@ body {
 }
 .about__header {
   padding: 2px 16px;
-  background-color: #9C27B0;
   color: white;
 }
 .about__body {
   padding: 2px 16px;
-  background-color: #bb45d0;
-}
-.about__img {
-  background-color: #bb45d0;
 }
 .about__title {
   text-align: center;
@@ -844,81 +851,6 @@ body {
   cursor: pointer;
 }
 .about__closex:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.support {
-  display: none;
-  position: fixed;
-  z-index: 4;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.support__header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2px 16px;
-  color: #2E0057;
-}
-.support__title {
-  text-align: center;
-  color: #2E0057;
-  font-weight: 700;
-  font-size: 40px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  margin-bottom: 15px;
-}
-.support__img {
-  margin: 0px 20px 20px 20px;
-}
-.support__content {
-  position: relative;
-  margin: auto;
-  padding: 0;
-  border: 5px solid #2E0057;
-  background-color: #F5F5DC;
-  width: 50%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.4s;
-}
-@keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-.support__closex {
-  color: #2E0057;
-  float: right;
-  font-size: 35px;
-  font-weight: bold;
-  top: -10px;
-  right: 0px;
-  position: absolute;
-  cursor: pointer;
-}
-.support__closex:hover {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-.support__closex:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
@@ -985,15 +917,15 @@ body {
 .monte1__title {
   text-align: center;
   color: #2E0057;
-  font-weight: 700;
-  font-size: 40px;
+  font-weight: 800;
+  font-size: 60px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   margin-bottom: 15px;
 }
 .monte1__text {
   color: #2E0057;
-  font-weight: 800;
-  font-size: 64px;
+  font-weight: 600;
+  font-size: 30px;
   text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
@@ -1069,15 +1001,15 @@ body {
 .monte2__title {
   text-align: center;
   color: #2E0057;
-  font-weight: 700;
-  font-size: 40px;
+  font-weight: 800;
+  font-size: 60px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   margin-bottom: 15px;
 }
 .monte2__text {
   color: #2E0057;
-  font-weight: 800;
-  font-size: 64px;
+  font-weight: 600;
+  font-size: 30px;
   text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
@@ -1153,15 +1085,15 @@ body {
 .monte3__title {
   text-align: center;
   color: #2E0057;
-  font-weight: 700;
-  font-size: 40px;
+  font-weight: 800;
+  font-size: 60px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   margin-bottom: 15px;
 }
 .monte3__text {
   color: #2E0057;
-  font-weight: 800;
-  font-size: 64px;
+  font-weight: 600;
+  font-size: 30px;
   text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
@@ -1237,15 +1169,15 @@ body {
 .monte4__title {
   text-align: center;
   color: #2E0057;
-  font-weight: 700;
-  font-size: 40px;
+  font-weight: 800;
+  font-size: 60px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   margin-bottom: 15px;
 }
 .monte4__text {
   color: #2E0057;
-  font-weight: 800;
-  font-size: 64px;
+  font-weight: 600;
+  font-size: 30px;
   text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
@@ -1321,20 +1253,21 @@ body {
 .monte5__title {
   text-align: center;
   color: #2E0057;
-  font-weight: 700;
-  font-size: 40px;
+  font-weight: 800;
+  font-size: 60px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   margin-bottom: 15px;
 }
 .monte5__text {
   color: #2E0057;
-  font-weight: 800;
-  font-size: 64px;
+  font-weight: 600;
+  font-size: 30px;
   text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .monte5__img {
   margin: 0px 20px 20px 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 .monte5__content {
   position: relative;
@@ -1404,20 +1337,21 @@ body {
 .monte6__title {
   text-align: center;
   color: #2E0057;
-  font-weight: 700;
-  font-size: 40px;
+  font-weight: 800;
+  font-size: 60px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   margin-bottom: 15px;
 }
 .monte6__text {
   color: #2E0057;
-  font-weight: 800;
-  font-size: 64px;
+  font-weight: 600;
+  font-size: 30px;
   text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .monte6__img {
   margin: 0px 20px 20px 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 .monte6__content {
   position: relative;
@@ -1487,20 +1421,21 @@ body {
 .monte7__title {
   text-align: center;
   color: #2E0057;
-  font-weight: 700;
-  font-size: 40px;
+  font-weight: 800;
+  font-size: 60px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   margin-bottom: 15px;
 }
 .monte7__text {
   color: #2E0057;
-  font-weight: 800;
-  font-size: 64px;
+  font-weight: 600;
+  font-size: 30px;
   text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .monte7__img {
   margin: 0px 20px 20px 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 .monte7__content {
   position: relative;

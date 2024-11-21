@@ -173,35 +173,6 @@ window.onclick = function(event) {
     }
 }
 
-var modals = document.getElementById('support');
-
-
-var btns = document.getElementById("support-btn");
-
-
-var spans = document.getElementsByClassName("support__closex")[0];
-
-
-
-btns.onclick = function() {
-    modals.style.display = "block";
-    
-}
-
-
-
-spans.onclick = function() {
-    modals.style.display = "none";
-}
-
-
-window.onclick = function(event) {
-    if (event.target == modals) {
-        modals.style.display = "none";
-    }
-}
-
-
 
 
 var modalchg1 = document.getElementById('monte1');
@@ -402,7 +373,6 @@ function renderProducts(page) {
 
     products.forEach(product => product.style.display = 'none');
     const currentProducts = products.slice(start, end);
-    const necurrentProducts = products.slice(end, end*2);
     currentProducts.forEach(product => product.style.display = 'block');
 }
 
@@ -437,9 +407,11 @@ function search_guids() {
         }
         else if (input == 0) {
             x[h].style.display = renderProducts(currentPage);
+            pagination.style.display = 'block'
         }
         else if(x[h].innerHTML.toLowerCase().includes(input)) {
-            x[h].style.display = products;
+            x[h].style.display = "block";
+            pagination.style.display = 'none'
         }
     }
 }
@@ -449,3 +421,35 @@ renderPagination();
 
 
 
+let ascending = true; 
+
+
+document.getElementById('sortButton').addEventListener('click', function() {
+    const grid = document.getElementById('grid_places');
+    const items = Array.from(grid.getElementsByClassName('place__grid-el'));
+    let SetName = document.getElementById('sortButton')
+
+    items.sort((a, b) => {
+        const nameA = a.getAttribute('data-name');
+        const nameB = b.getAttribute('data-name');
+        return ascending ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
+        
+    });
+
+    
+
+
+    grid.innerHTML = '';
+    items.forEach(item => grid.appendChild(item));
+
+    
+    if (ascending == false){
+        SetName.innerText = 'Сортировать по возрастанию' ;
+    }
+    else{
+        SetName.innerText = 'Сортировать по убыванию'
+    }
+    
+    ascending = !ascending;
+
+});

@@ -179,45 +179,46 @@
                 <div class="place__search">
                     <input class="place__searcher" id="searchbar" onkeyup="search_guids()" type="text" name="search" placeholder="Search...">
                 </div>
+                <button class="place__sort" id="sortButton">Сортировать по Возрастанию</button>
             </div>
-            <div class="place__grid-box">
-                <button id="monte-1" class="place__grid-el">
+            <div id="grid_places" class="place__grid-box">
+                <button data-name="Отэли" id="monte-1" class="place__grid-el">
                     <img src="./assets/img/monte-5.png" alt="" class="place__png">
                     <h2 class="place__subtitle">
                         Отэли
                     </h2>
                 </button>
-                <button id="monte-2" class="place__grid-el">
+                <button data-name="Города" id="monte-2" class="place__grid-el">
                     <img src="./assets/img/monte-6.png" alt="" class="place__png">
                     <h2 class="place__subtitle">
                         Города
                     </h2>
                </button>
-                <button id="monte-3" class="place__grid-el">
+                <button data-name="Парки" id="monte-3" class="place__grid-el">
                     <img src="./assets/img/monte-7.png" alt="" class="place__png">
                     <h2 class="place__subtitle">
                         Парки
                     </h2>
                 </button>
-                <button id="monte-4" class="place__grid-el">
+                <button data-name="Достопремичательности" id="monte-4" class="place__grid-el">
                     <img src="./assets/img/monte-8.png" alt="" class="place__png">
                     <h2 class="place__subtitle">
-                        Места для посещения
+                        Достопремичательности
                     </h2>
                </button>
-                <button id="monte-5" class="place__grid-el">
+                <button data-name="Пляжи" id="monte-5" class="place__grid-el">
                     <img src="./assets/img/monte-9.png" alt="" class="place__png">
                     <h2 class="place__subtitle">
                         Пляжи
                     </h2>
                 </button>
-                <button id="monte-6" class="place__grid-el">
+                <button data-name="Рестораны" id="monte-6" class="place__grid-el">
                     <img src="./assets/img/monte-10.png" alt="" class="place__png">
                     <h2 class="place__subtitle">
                         Рестораны
                     </h2>
                 </button>
-                <button id="monte-7" class="place__grid-el">
+                <button data-name="Магазины" id="monte-7" class="place__grid-el">
                     <img src="./assets/img/monte-11.png" alt="" class="place__png">
                     <h2 class="place__subtitle">
                         Магазины
@@ -270,7 +271,7 @@
         <div class="monte4__content">
             <div class="monte4__header">
                 <span class="monte4__closex">&times;</span>
-                <h1 class="monte4__title">Места для посещения </h1>                 
+                <h1 class="monte4__title">Достопремичательности</h1>                 
                 <img src="./assets/img/monte-8.png" alt="" class="monte4__img">
                 <p class="monte4__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur magni voluptates corporis earum maiores excepturi labore quaerat voluptatibus fuga, ullam quis sapiente in nemo quidem velit facere perspiciatis vitae ut!</p>
             </div>
@@ -336,9 +337,7 @@
             </div>
             <div class="foot__title-box foot__box">
                 <a href="./main.html"><img src="./assets/img/VRrariaf.svg" alt="" class="foot__svg"></a>
-                <button id="support-btn" class="foot__sup">
-                    ПОДДЕРЖИТЕ НАС
-                </button>
+
             </div>
             <div class="foot__text-box foot__box">
                 <button id="about-btn" class="foot__about">
@@ -371,22 +370,12 @@
             </div>
             <div class="about__body">
                 <h2 class="about__text">
-                    "Вчера, в 14:37 по местному времени, произошло мощное землетрясение магнитудой 7,2 балла по шкале Рихтера. Эпицентр находился в [название региона], в [расстояние] километрах от города [название города].  Подземные толчки ощущались на огромной территории, в радиусе [расстояние] километров.  Сообщения о разрушениях поступают из нескольких населённых пунктов.  По предварительным данным, пострадало [количество] человек, из них [количество] госпитализированы с травмами различной степени тяжести.  Спасательные службы работают в круглосуточном режиме, разбирая завалы и эвакуируя пострадавших.  Сильнее всего пострадали здания, построенные без соблюдения норм сейсмостойкости.  Специалисты отмечают, что это землетрясение стало одним из самых мощных за последние [количество] лет в данном регионе.  В настоящее время проводятся работы по оценке масштабов разрушений и оказанию помощи пострадавшим.  Многие жители лишились крова, и им необходима срочная гуманитарная помощь: палатки, вода, продукты питания, медикаменты.  Международные организации уже начали оказывать поддержку пострадавшим районам, направляя специалистов и гуманитарные грузы.  После землетрясения были зафиксированы многочисленные афтершоки, что вызывает обеспокоенность у специалистов и местных жителей.  Ситуация находится под контролем властей, которые призывают сохранять спокойствие и следовать рекомендациям спасательных служб."
+                    VRraria — это инновационный сайт с путеводителями, предлагающий пользователям уникальный опыт путешествий в виртуальной реальности. На платформе представлены интерактивные туры по популярным туристическим направлениям, где пользователи могут исследовать достопримечательности, улицы и культурные объекты в 3D-формате. VRraria также предлагает полезные советы, маршруты и рекомендации по местам проживания и питания, что делает планирование поездок более удобным и увлекательным. Сайт ориентирован на тех, кто хочет погрузиться в атмосферу новых мест еще до начала путешествия.
                 </h2>
             </div>
         </div>
     </div>
-    <div id="support" class="support">
-
-
-        <div class="support__content">
-            <div class="support__header">
-                <span class="support__closex">&times;</span>
-                <h1 class="support__title">Поддержите нас пазязя (: </h1>                 
-                <img src="./assets/img/qr_image.png" alt="" class="support__img">
-            </div>
-        </div>
-    </div>
+    
     <script src="./assets/js/monte.js"></script>
 </section>
 </body>
