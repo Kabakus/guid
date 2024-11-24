@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: Rubik;
+    scroll-behavior: smooth;
 }
 @font-face {
     font-family:Rubik;
@@ -41,8 +42,10 @@ li{
 body{
     background: url("../img/BG.png");
     background-attachment: fixed;
-    
-    
+}
+
+.mapy{
+  border-top: 5px solid #2E0057;
 }
 .body{
   background: linear-gradient(180deg, rgba(252,208,0,0.8) 0%, rgba(244,101,254,0.8) 5%, rgba(0,149,255,0.8) 73%, rgba(0,153,41,0.8044467787114846) 96%);
@@ -91,7 +94,7 @@ body{
         
         &_2{
             color: #E71E07;
-        
+            
             &::before{
                 content: url("../img/question.svg");
                 bottom: -10px;
@@ -381,13 +384,18 @@ body{
     background-color: rgba(0, 0, 0, 0.4); 
   
     &__text{
+      color: #2E0057;
+      font-weight: 800;
+      font-size: 64px;
       text-align: center;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     }
     &__content {
       position: relative;
       margin: auto;
       padding: 0;
-      border: 5px solid #7B1FA2;
+      border: 5px solid #2E0057;
+      background-color: #F5F5DC;
       width: 50%;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       -webkit-animation-name: animatetop;
@@ -406,10 +414,14 @@ body{
       }
     }
     &__close {
-      color: white;
+      color: #2E0057;
       float: right;
-      font-size: 28px;
+      font-size: 35px;
       font-weight: bold;
+      top: -10px;
+      right: 0px;
+      position: absolute;
+      cursor: pointer;
       &:hover{
         color: #000;
         text-decoration: none;
@@ -423,7 +435,7 @@ body{
     }
     &__header {
       padding: 2px 16px;
-      background-color: #9C27B0;
+      background-color: #F5F5DC;
       color: white;
     }
 
@@ -556,13 +568,20 @@ body{
     background-color: rgba(0, 0, 0, 0.4); 
   
   &__text{
+    color: #2E0057;
+    font-weight: 800;
+    font-size: 64px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    
     text-align: center;
   }
   &__content {
     position: relative;
     margin: auto;
     padding: 0;
-    border: 5px solid #7B1FA2;
+    border: 5px solid #2E0057;
+    background-color: #F5F5DC;
     width: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -webkit-animation-name: animatetop;
@@ -581,10 +600,14 @@ body{
     }
   }
   &__close {
-    color: white;
+    color: #2E0057;
     float: right;
-    font-size: 28px;
+    font-size: 35px;
     font-weight: bold;
+    top: -10px;
+    right: 0px;
+    position: absolute;
+    cursor: pointer;
     &:hover{
       color: #000;
       text-decoration: none;
@@ -598,7 +621,7 @@ body{
   }  
   &__header {
     padding: 2px 16px;
-    background-color: #9C27B0;
+    background-color: #F5F5DC;
     color: white;
   }
   &__body {
@@ -709,13 +732,20 @@ body{
     background-color: rgba(0, 0, 0, 0.4); 
 
   &__text{
+    color: #2E0057;
+    font-weight: 800;
+    font-size: 64px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    
     text-align: center;
   }
   &__content {
     position: relative;
     margin: auto;
     padding: 0;
-    border: 5px solid #7B1FA2;
+    border: 5px solid #2E0057;
+    background-color: #F5F5DC;
     width: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -webkit-animation-name: animatetop;
@@ -734,10 +764,14 @@ body{
     }
   }
   &__close {
-    color: white;
+    color: #2E0057;
     float: right;
-    font-size: 28px;
+    font-size: 35px;
     font-weight: bold;
+    top: -10px;
+    right: 0px;
+    position: absolute;
+    cursor: pointer;
     &:hover{
       color: #000;
       text-decoration: none;
@@ -751,7 +785,7 @@ body{
   }  
   &__header {
     padding: 2px 16px;
-    background-color: #9C27B0;
+    background-color: #F5F5DC;
     color: white;
   }
   
@@ -937,8 +971,8 @@ body{
   &__text{
     text-align: center;
     color: #2E0057;
-    font-weight: 700;
-    font-size: 40px;
+    font-weight: 800;
+    font-size: 60px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     margin-bottom: 15px;
   }
@@ -946,7 +980,8 @@ body{
     position: relative;
     margin: auto;
     padding: 0;
-    border: 5px solid #7B1FA2;
+    border: 5px solid #2E0057;
+    background-color: #F5F5DC;
     width: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -webkit-animation-name: animatetop;
@@ -967,8 +1002,12 @@ body{
   &__closex {
     color: #2E0057;
     float: right;
-    font-size: 28px;
+    font-size: 35px;
     font-weight: bold;
+    top: -10px;
+    right: 0px;
+    position: absolute;
+    cursor: pointer;
     &:hover{
       color: #000;
       text-decoration: none;
@@ -983,7 +1022,7 @@ body{
 
   &__header {
     padding: 2px 16px;
-    background-color: #9C27B0;
+    background-color: #F5F5DC;
     color: white;
   }
 
@@ -991,7 +1030,7 @@ body{
     display: flex;
     flex-direction: column;
     padding: 2px 16px;
-    background-color:#bb45d0 ;
+    background-color: #F5F5DC;
     align-items: center;
   }
   &__input{
@@ -1136,7 +1175,7 @@ body{
   background-color: rgba(0, 0, 0, 0.4); 
   &__header {
     padding: 2px 16px;
-    background-color: #9C27B0;
+    background-color: #F5F5DC;
     color: white;
   }
 
@@ -1166,7 +1205,8 @@ body{
     position: relative;
     margin: auto;
     padding: 0;
-    border: 5px solid #7B1FA2;
+    border: 5px solid #2E0057;
+    background-color: #F5F5DC;
     width: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -webkit-animation-name: animatetop;
@@ -1187,8 +1227,12 @@ body{
   &__closex {
     color: #2E0057;
     float: right;
-    font-size: 28px;
+    font-size: 35px;
     font-weight: bold;
+    top: -10px;
+    right: 0px;
+    position: absolute;
+    cursor: pointer;
     &:hover{
       color: #000;
       text-decoration: none;
@@ -1219,7 +1263,7 @@ body{
     flex-direction: column;
     align-items: center;
     padding: 2px 16px;
-    background-color: #9C27B0;
+    background-color: #F5F5DC;
     color: white;
   }
   &__title{
@@ -1237,7 +1281,8 @@ body{
     position: relative;
     margin: auto;
     padding: 0;
-    border: 5px solid #7B1FA2;
+    border: 5px solid #2E0057;
+    background-color: #F5F5DC;
     width: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -webkit-animation-name: animatetop;
@@ -1258,9 +1303,12 @@ body{
   &__closex {
     color: #2E0057;
     float: right;
-    font-size: 28px;
+    font-size: 35px;
     font-weight: bold;
-    align-self: flex-end;
+    top: -10px;
+    right: 0px;
+    position: absolute;
+    cursor: pointer;
     &:hover{
       color: #000;
       text-decoration: none;
