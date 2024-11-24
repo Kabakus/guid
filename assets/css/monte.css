@@ -722,6 +722,33 @@ body {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
+.place__filter {
+  margin: 25px 0px 0px 30px;
+  display: flex;
+  flex-direction: row;
+}
+.place__show-filters {
+  margin-right: 25px;
+  font-weight: 600;
+  font-size: 28px;
+  border-radius: 10px;
+  border: none;
+  background-color: orange;
+  color: #2E0057;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.place__filter-button {
+  font-weight: 600;
+  font-size: 25px;
+  border-radius: 10px;
+  border: none;
+  background-color: #2E0057;
+  color: orange;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-top: 1.5px;
+}
 
 .foot {
   margin-top: 300px;

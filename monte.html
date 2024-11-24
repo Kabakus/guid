@@ -180,45 +180,53 @@
                     <input class="place__searcher" id="searchbar" onkeyup="search_guids()" type="text" name="search" placeholder="Search...">
                 </div>
                 <button class="place__sort" id="sortButton">Сортировать по Возрастанию</button>
-            </div>
+                <div class="place__filter">
+                    <button id="show-filters" class="place__show-filters">Показать фильтры</button>
+                    <div class="place__filter-buttons" id="filterButtons" style="display: none;">
+                        <button class="place__filter-button" data-filter="citys">Города</button>
+                        <button class="place__filter-button" data-filter="interests">Достопремичательности</button>
+                        <button class="place__filter-button" data-filter="rest">Отдых</button>
+                        <button class="place__filter-button" data-filter="shops">Магазины</button>
+                    </div>
+                </div>  
             <div id="grid_places" class="place__grid-box">
-                <button data-name="Отэли" id="monte-1" class="place__grid-el">
+                <button  data-name="Отэли" id="monte-1" class="place__grid-el rest">
                     <img src="./assets/img/monte-5.png" alt="" class="place__png">
                     <h2 class="place__subtitle">
                         Отэли
                     </h2>
                 </button>
-                <button data-name="Города" id="monte-2" class="place__grid-el">
+                <button  data-name="Города" id="monte-2" class="place__grid-el citys">
                     <img src="./assets/img/monte-6.png" alt="" class="place__png">
                     <h2 class="place__subtitle">
                         Города
                     </h2>
                </button>
-                <button data-name="Парки" id="monte-3" class="place__grid-el">
+                <button  data-name="Парки" id="monte-3" class="place__grid-el interests">
                     <img src="./assets/img/monte-7.png" alt="" class="place__png">
                     <h2 class="place__subtitle">
                         Парки
                     </h2>
                 </button>
-                <button data-name="Достопремичательности" id="monte-4" class="place__grid-el">
+                <button  data-name="Достопремичательности" id="monte-4" class="place__grid-el interests">
                     <img src="./assets/img/monte-8.png" alt="" class="place__png">
                     <h2 class="place__subtitle">
                         Достопремичательности
                     </h2>
                </button>
-                <button data-name="Пляжи" id="monte-5" class="place__grid-el">
+                <button  data-name="Пляжи" id="monte-5" class="place__grid-el rest">
                     <img src="./assets/img/monte-9.png" alt="" class="place__png">
                     <h2 class="place__subtitle">
                         Пляжи
                     </h2>
                 </button>
-                <button data-name="Рестораны" id="monte-6" class="place__grid-el">
+                <button  data-name="Рестораны" id="monte-6" class="place__grid-el shops">
                     <img src="./assets/img/monte-10.png" alt="" class="place__png">
                     <h2 class="place__subtitle">
                         Рестораны
                     </h2>
                 </button>
-                <button data-name="Магазины" id="monte-7" class="place__grid-el">
+                <button  data-name="Магазины" id="monte-7" class="place__grid-el shops">
                     <img src="./assets/img/monte-11.png" alt="" class="place__png">
                     <h2 class="place__subtitle">
                         Магазины

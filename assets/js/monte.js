@@ -1,5 +1,6 @@
 'use strict';
 
+
 var modal = document.getElementById('myModal');
 
 
@@ -452,4 +453,31 @@ document.getElementById('sortButton').addEventListener('click', function() {
     
     ascending = !ascending;
 
+});
+
+const toggleFilterButton = document.getElementById('show-filters');
+const filterButtonsContainer = document.getElementById('filterButtons');
+const filterButtons = document.querySelectorAll('.place__filter-button');
+const gridItems = document.querySelectorAll('.place__grid-el');
+
+
+toggleFilterButton.addEventListener('click', function() {
+    const isVisible = filterButtonsContainer.style.display === 'block';
+    filterButtonsContainer.style.display = isVisible ? 'none' : 'block';
+    toggleFilterButton.textContent = isVisible ? 'Показать фильтры' : 'Скрыть фильтры';
+});
+
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const filterValue = this.getAttribute('data-filter');
+
+        gridItems.forEach(item => {
+            if (item.classList.contains(filterValue)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
 });
