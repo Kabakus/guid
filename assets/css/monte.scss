@@ -39,7 +39,7 @@ li{
 }
 
 body{
-    background: url("../img/BG.png");
+    background: url("https://github.com/Kabakus/kartinki/blob/main/BG.png?raw=true");
     background-attachment: fixed;
     
     
@@ -56,7 +56,7 @@ body{
 .header{
     height: 1100px;
     padding-top: 50px;
-    background: url('../img/monte.png') no-repeat center center / cover ;
+    background: url('https://github.com/Kabakus/kartinki/blob/main/monte.png?raw=true') no-repeat center center / cover ;
     box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.5);
     &__wrapper{
         display: flex;
@@ -83,7 +83,7 @@ body{
             color: #42B132;
         
             &::before{
-                content: url("../img/phone.svg");
+                content: url("https://raw.githubusercontent.com/Kabakus/kartinki/c6ca49978906187fa936f913218ef5985b1cdba3/phone.svg");
                 bottom: -10px;
                 position: relative;
                 text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -95,7 +95,7 @@ body{
             color: #E71E07;
         
             &::before{
-                content: url("../img/question.svg");
+                content: url("https://raw.githubusercontent.com/Kabakus/kartinki/c6ca49978906187fa936f913218ef5985b1cdba3/question.svg");
                 bottom: -10px;
                 position: relative;
             }
@@ -106,7 +106,7 @@ body{
             color: #FF9D00;
         
             &::before{
-                content: url("../img/map\ \(1\).svg");
+                content: url("https://raw.githubusercontent.com/Kabakus/kartinki/c6ca49978906187fa936f913218ef5985b1cdba3/map%20(1).svg");
                 bottom: -10px;
                 position: relative;
             }
@@ -115,7 +115,7 @@ body{
             color: #009CDA;
         
             &::before{
-                content: url("../img/profile\ \(1\).svg");
+                content: url("https://raw.githubusercontent.com/Kabakus/kartinki/c6ca49978906187fa936f913218ef5985b1cdba3/profile%20(1).svg");
                 bottom: -10px;
                 position: relative;
             }
@@ -180,7 +180,7 @@ body{
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
         &_last::after{
-            content: url("../img/eye.svg");
+            content: url("https://raw.githubusercontent.com/Kabakus/kartinki/c6ca49978906187fa936f913218ef5985b1cdba3/eye.svg");
         }
     }
     &__login-box{
@@ -297,7 +297,7 @@ body{
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
         &_last::after{
-            content: url("../img/eye.svg");
+            content: url("https://raw.githubusercontent.com/Kabakus/kartinki/c6ca49978906187fa936f913218ef5985b1cdba3/eye.svg");
         }
     }
     &__login-box{
@@ -685,7 +685,7 @@ body{
 .png{
   height: 800px;
   margin-top: 200px;
-  background: url('../img/monte-3.png') no-repeat center center / cover ;
+  background: url('https://github.com/Kabakus/kartinki/blob/main/monte-3.png?raw=true') no-repeat center center / cover ;
   box-shadow: 0px 0px 60px 30px rgba(0, 0, 0, 0.5);
 }
 

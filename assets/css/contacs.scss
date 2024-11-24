@@ -39,7 +39,7 @@ li{
 }
 
 body{
-    background: url("../img/BG.png");
+    background: url("https://github.com/Kabakus/kartinki/blob/main/BG.png?raw=true");
     background-attachment: fixed;
     
     
@@ -81,7 +81,7 @@ body{
             color: #42B132;
         
             &::before{
-                content: url("../img/phone.svg");
+                content: url("https://raw.githubusercontent.com/Kabakus/kartinki/c6ca49978906187fa936f913218ef5985b1cdba3/phone.svg");
                 bottom: -10px;
                 position: relative;
                 text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -93,7 +93,7 @@ body{
             color: #E71E07;
         
             &::before{
-                content: url("../img/question.svg");
+                content: url("https://raw.githubusercontent.com/Kabakus/kartinki/c6ca49978906187fa936f913218ef5985b1cdba3/question.svg");
                 bottom: -10px;
                 position: relative;
             }
@@ -104,7 +104,7 @@ body{
             color: #FF9D00;
         
             &::before{
-                content: url("../img/map\ \(1\).svg");
+                content: url("https://raw.githubusercontent.com/Kabakus/kartinki/c6ca49978906187fa936f913218ef5985b1cdba3/map%20(1).svg");
                 bottom: -10px;
                 position: relative;
             }
@@ -113,7 +113,7 @@ body{
             color: #009CDA;
         
             &::before{
-                content: url("../img/profile\ \(1\).svg");
+                content: url("https://raw.githubusercontent.com/Kabakus/kartinki/c6ca49978906187fa936f913218ef5985b1cdba3/profile%20(1).svg");
                 bottom: -10px;
                 position: relative;
             }
@@ -170,7 +170,7 @@ body{
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
         &_last::after{
-            content: url("../img/eye.svg");
+            content: url("https://raw.githubusercontent.com/Kabakus/kartinki/c6ca49978906187fa936f913218ef5985b1cdba3/eye.svg");
         }
     }
     &__login-box{
@@ -287,7 +287,7 @@ body{
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
         &_last::after{
-            content: url("../img/eye.svg");
+            content: url("https://raw.githubusercontent.com/Kabakus/kartinki/c6ca49978906187fa936f913218ef5985b1cdba3/eye.svg");
         }
     }
     &__login-box{
@@ -782,7 +782,6 @@ body{
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   }
 }
-
 .about{
   display: none; 
   position: fixed; 
@@ -797,16 +796,13 @@ body{
   background-color: rgba(0, 0, 0, 0.4); 
   &__header {
     padding: 2px 16px;
-    background-color: #9C27B0;
+    
     color: white;
   }
 
   &__body {
     padding: 2px 16px;
-    background-color:#bb45d0 ;
-  }
-  &__img{
-    background-color: #bb45d0;
+    
   }
   &__title{
     text-align: center;
@@ -827,7 +823,8 @@ body{
     position: relative;
     margin: auto;
     padding: 0;
-    border: 5px solid #7B1FA2;
+    border: 5px solid #2E0057;
+    background-color: #F5F5DC;
     width: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -webkit-animation-name: animatetop;
@@ -848,8 +845,12 @@ body{
   &__closex {
     color: #2E0057;
     float: right;
-    font-size: 28px;
+    font-size: 35px;
     font-weight: bold;
+    top: -10px;
+    right: 0px;
+    position: absolute;
+    cursor: pointer;
     &:hover{
       color: #000;
       text-decoration: none;
@@ -862,79 +863,3 @@ body{
     }
   }
 }
-
-.support{
-  display: none; 
-  position: fixed; 
-  z-index: 4; 
-  padding-top: 100px; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(0, 0, 0); 
-  background-color: rgba(0, 0, 0, 0.4); 
-  &__header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2px 16px;
-    background-color: #9C27B0;
-    color: white;
-  }
-  &__title{
-    text-align: center;
-    color: #2E0057;
-    font-weight: 700;
-    font-size: 40px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    margin-bottom: 15px;
-  }
-  &__img{
-    margin:0px 20px 20px 20px;
-  }
-  &__content {
-    position: relative;
-    margin: auto;
-    padding: 0;
-    border: 5px solid #7B1FA2;
-    width: 50%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s;
-  }
-  @keyframes animatetop {
-    from {
-      top: -300px;
-      opacity: 0;
-    }
-    to {
-      top: 0;
-      opacity: 1;
-    }
-  }
-  &__closex {
-    color: #2E0057;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    align-self: flex-end;
-    &:hover{
-      color: #000;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    &:focus{
-      color: #000;
-      text-decoration: none;
-      cursor: pointer;
-    }
-  }
-}
-
-
-
-

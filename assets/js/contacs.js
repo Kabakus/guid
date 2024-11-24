@@ -219,31 +219,3 @@ window.onclick = function(event) {
     }
 }
 
-var modals = document.getElementById('support');
-
-
-var btns = document.getElementById("support-btn");
-
-
-var spans = document.getElementsByClassName("support__closex")[0];
-
-
-
-btns.onclick = function() {
-    modals.style.display = "block";
-    
-}
-
-
-
-spans.onclick = function() {
-    modals.style.display = "none";
-}
-
-
-window.onclick = function(event) {
-    if (event.target == modals) {
-        modals.style.display = "none";
-    }
-}
-

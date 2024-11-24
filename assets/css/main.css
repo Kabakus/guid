@@ -40,7 +40,7 @@ li {
 }
 
 body {
-  background: url("../img/BG.png");
+  background: url("https://github.com/Kabakus/kartinki/blob/main/BG.png?raw=true");
   background-attachment: fixed;
 }
 
@@ -85,7 +85,7 @@ body {
   color: #42B132;
 }
 .header__text_1::before {
-  content: url("../img/phone.svg");
+  content: url("https://raw.githubusercontent.com/Kabakus/kartinki/c6ca49978906187fa936f913218ef5985b1cdba3/phone.svg");
   bottom: -10px;
   position: relative;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -94,7 +94,7 @@ body {
   color: #E71E07;
 }
 .header__text_2::before {
-  content: url("../img/question.svg");
+  content: url("https://raw.githubusercontent.com/Kabakus/kartinki/c6ca49978906187fa936f913218ef5985b1cdba3/question.svg");
   bottom: -10px;
   position: relative;
 }
@@ -102,7 +102,7 @@ body {
   color: #FF9D00;
 }
 .header__text_3::before {
-  content: url("../img/map (1).svg");
+  content: url("https://raw.githubusercontent.com/Kabakus/kartinki/c6ca49978906187fa936f913218ef5985b1cdba3/map%20(1).svg");
   bottom: -10px;
   position: relative;
 }
@@ -110,7 +110,7 @@ body {
   color: #009CDA;
 }
 .header__text_4::before {
-  content: url("../img/profile (1).svg");
+  content: url("https://raw.githubusercontent.com/Kabakus/kartinki/c6ca49978906187fa936f913218ef5985b1cdba3/profile%20(1).svg");
   bottom: -10px;
   position: relative;
 }
@@ -164,7 +164,7 @@ body {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .enter__input_last::after {
-  content: url("../img/eye.svg");
+  content: url("https://raw.githubusercontent.com/Kabakus/kartinki/c6ca49978906187fa936f913218ef5985b1cdba3/eye.svg");
 }
 .enter__login-box {
   display: flex;
@@ -280,7 +280,7 @@ body {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .log__input_last::after {
-  content: url("../img/eye.svg");
+  content: url("https://raw.githubusercontent.com/Kabakus/kartinki/c6ca49978906187fa936f913218ef5985b1cdba3/eye.svg");
 }
 .log__login-box {
   display: flex;
@@ -639,19 +639,19 @@ body {
   box-shadow: 0px 0px 15px 30px rgba(34, 60, 80, 0.2);
 }
 .slider__slide:nth-of-type(1) {
-  background: url("../img/1scroll (1).png") no-repeat center center/cover;
+  background: url("https://github.com/Kabakus/kartinki/blob/main/1scroll%20(1).png?raw=true") no-repeat center center/cover;
 }
 .slider__slide:nth-of-type(2) {
-  background: url("../img/2scroll (1).png") no-repeat center center/cover;
+  background: url("https://github.com/Kabakus/kartinki/blob/main/2scroll%20(1).png?raw=true") no-repeat center center/cover;
 }
 .slider__slide:nth-of-type(3) {
-  background: url("../img/3scroll (1).png") no-repeat center center/cover;
+  background: url("https://github.com/Kabakus/kartinki/blob/main/3scroll%20(1).png?raw=true") no-repeat center center/cover;
 }
 .slider__slide:nth-of-type(4) {
-  background: url("../img/4scroll (1).png") no-repeat center center/cover;
+  background: url("https://github.com/Kabakus/kartinki/blob/main/4scroll%20(1).png?raw=true") no-repeat center center/cover;
 }
 .slider__slide:nth-of-type(5) {
-  background: url("../img/5scroll (1).png") no-repeat center center/cover;
+  background: url("https://github.com/Kabakus/kartinki/blob/main/5scroll%20(1).png?raw=true") no-repeat center center/cover;
 }
 .slider .showing {
   opacity: 1;
@@ -1074,16 +1074,6 @@ body {
   align-items: flex-end;
   text-align: end;
 }
-.foot__sup {
-  cursor: pointer;
-  border: none;
-  background: none;
-  filter: blur(blur);
-  font-size: 40px;
-  color: transparent;
-  text-shadow: 0 0 5px #000;
-  font-weight: 700;
-}
 .foot__about {
   cursor: pointer;
   border: none;
@@ -1127,15 +1117,10 @@ body {
 }
 .about__header {
   padding: 2px 16px;
-  background-color: #F5F5DC;
   color: white;
 }
 .about__body {
   padding: 2px 16px;
-  background-color: #bb45d0;
-}
-.about__img {
-  background-color: #bb45d0;
 }
 .about__title {
   text-align: center;
@@ -1191,82 +1176,6 @@ body {
   cursor: pointer;
 }
 .about__closex:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.support {
-  display: none;
-  position: fixed;
-  z-index: 4;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.support__header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2px 16px;
-  background-color: #F5F5DC;
-  color: white;
-}
-.support__title {
-  text-align: center;
-  color: #2E0057;
-  font-weight: 700;
-  font-size: 40px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  margin-bottom: 15px;
-}
-.support__img {
-  margin: 0px 20px 20px 20px;
-}
-.support__content {
-  position: relative;
-  margin: auto;
-  padding: 0;
-  border: 5px solid #2E0057;
-  background-color: #F5F5DC;
-  width: 50%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.4s;
-}
-@keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-.support__closex {
-  color: #2E0057;
-  float: right;
-  font-size: 35px;
-  font-weight: bold;
-  top: -10px;
-  right: 0px;
-  position: absolute;
-  cursor: pointer;
-}
-.support__closex:hover {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-.support__closex:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
