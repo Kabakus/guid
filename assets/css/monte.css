@@ -30,6 +30,11 @@
   src: url(../fonts/Rubik-SemiBold.ttf);
   font-weight: 600;
 }
+button {
+  background: none;
+  border: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -957,7 +962,10 @@ body {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .monte1__img {
-  margin: 0px 20px 20px 20px;
+  width: 575px;
+  height: 390px;
+  margin: 20px 0px 0px 55px;
+  border-radius: 40px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 .monte1__content {
@@ -1039,9 +1047,13 @@ body {
   font-size: 30px;
   text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-left: 75px;
 }
 .monte2__img {
-  margin: 0px 20px 20px 20px;
+  width: 575px;
+  height: 390px;
+  margin: 20px 0px 0px 55px;
+  border-radius: 40px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 .monte2__content {
@@ -1123,9 +1135,13 @@ body {
   font-size: 30px;
   text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-left: 75px;
 }
 .monte3__img {
-  margin: 0px 20px 20px 20px;
+  width: 575px;
+  height: 390px;
+  margin: 20px 0px 0px 55px;
+  border-radius: 40px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 .monte3__content {
@@ -1209,7 +1225,10 @@ body {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .monte4__img {
-  margin: 0px 20px 20px 20px;
+  width: 575px;
+  height: 390px;
+  margin: 20px 0px 0px 120px;
+  border-radius: 40px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 .monte4__content {
@@ -1218,7 +1237,7 @@ body {
   padding: 0;
   border: 5px solid #2E0057;
   background-color: #F5F5DC;
-  width: 50%;
+  width: 60%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
@@ -1291,9 +1310,13 @@ body {
   font-size: 30px;
   text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-left: 45px;
 }
 .monte5__img {
-  margin: 0px 20px 20px 20px;
+  width: 575px;
+  height: 390px;
+  margin: 20px 0px 0px 55px;
+  border-radius: 40px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 .monte5__content {
@@ -1375,9 +1398,13 @@ body {
   font-size: 30px;
   text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-left: 35px;
 }
 .monte6__img {
-  margin: 0px 20px 20px 20px;
+  width: 575px;
+  height: 390px;
+  margin: 20px 0px 0px 55px;
+  border-radius: 40px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 .monte6__content {
@@ -1459,9 +1486,13 @@ body {
   font-size: 30px;
   text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-left: 35px;
 }
 .monte7__img {
-  margin: 0px 20px 20px 20px;
+  width: 575px;
+  height: 390px;
+  margin: 20px 0px 0px 55px;
+  border-radius: 40px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 .monte7__content {

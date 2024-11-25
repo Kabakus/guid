@@ -481,3 +481,123 @@ filterButtons.forEach(button => {
         });
     });
 });
+
+
+const apiUrl = 'https://673add6e339a4ce44519711d.mockapi.io/vrar/test'; // Замените на ваш URL
+
+
+async function getMonte(monteId) {
+    const response = await fetch(`${apiUrl}/${monteId}`);
+    const data = await response.json();
+    return data;
+}
+
+
+document.getElementById('city1').addEventListener('click', async () => {
+    const monteId = 1; 
+    const monte = await getMonte(monteId);
+    openMontePage(monte);
+});
+document.getElementById('city2').addEventListener('click', async () => {
+    const monteId = 2; 
+    const monte = await getMonte(monteId);
+    openMontePage(monte);
+});
+document.getElementById('city3').addEventListener('click', async () => {
+    const monteId = 3; 
+    const monte = await getMonte(monteId);
+    openMontePage(monte);
+});
+document.getElementById('hotels1').addEventListener('click', async () => {
+    const monteId = 4; 
+    const monte = await getMonte(monteId);
+    openMontePage(monte);
+});
+document.getElementById('hotels2').addEventListener('click', async () => {
+    const monteId = 5; 
+    const monte = await getMonte(monteId);
+    openMontePage(monte);
+});
+document.getElementById('parks1').addEventListener('click', async () => {
+    const monteId = 6; 
+    const monte = await getMonte(monteId);
+    openMontePage(monte);
+});
+document.getElementById('parks2').addEventListener('click', async () => {
+    const monteId = 7; 
+    const monte = await getMonte(monteId);
+    openMontePage(monte);
+});
+document.getElementById('parks3').addEventListener('click', async () => {
+    const monteId = 8; 
+    const monte = await getMonte(monteId);
+    openMontePage(monte);
+});
+document.getElementById('interests1').addEventListener('click', async () => {
+    const monteId = 9; 
+    const monte = await getMonte(monteId);
+    openMontePage(monte);
+});
+document.getElementById('interests2').addEventListener('click', async () => {
+    const monteId = 10; 
+    const monte = await getMonte(monteId);
+    openMontePage(monte);
+});
+document.getElementById('interests3').addEventListener('click', async () => {
+    const monteId = 11; 
+    const monte = await getMonte(monteId);
+    openMontePage(monte);
+});
+document.getElementById('beaches1').addEventListener('click', async () => {
+    const monteId = 12; 
+    const monte = await getMonte(monteId);
+    openMontePage(monte);
+});
+document.getElementById('beaches2').addEventListener('click', async () => {
+    const monteId = 13; 
+    const monte = await getMonte(monteId);
+    openMontePage(monte);
+});
+document.getElementById('beaches3').addEventListener('click', async () => {
+    const monteId = 14; 
+    const monte = await getMonte(monteId);
+    openMontePage(monte);
+});
+document.getElementById('resturants1').addEventListener('click', async () => {
+    const monteId = 15; 
+    const monte = await getMonte(monteId);
+    openMontePage(monte);
+});
+document.getElementById('resturants2').addEventListener('click', async () => {
+    const monteId = 16; 
+    const monte = await getMonte(monteId);
+    openMontePage(monte);
+});
+document.getElementById('shops1').addEventListener('click', async () => {
+    const monteId = 17; 
+    const monte = await getMonte(monteId);
+    openMontePage(monte);
+});
+document.getElementById('shops2').addEventListener('click', async () => {
+    const monteId = 18; 
+    const monte = await getMonte(monteId);
+    openMontePage(monte);
+});
+
+
+
+function openMontePage(monte) {
+    const monteInfo = `
+        <body style='background: url("https://github.com/Kabakus/kartinki/blob/main/BG.png?raw=true"); background-attachment: fixed; margin: 0px'>
+          <div class='body' style='height: 200vh; background: linear-gradient(180deg, rgba(252,208,0,0.8) 0%, rgba(244,101,254,0.8) 5%, rgba(0,149,255,0.8) 73%, rgba(0,153,41,0.8044467787114846) 96%);'>
+              <h2 style="color: #F5F5DC; font-weight: 800; font-size: 64px; text-align: center; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">${monte.title}</h2>
+              ${monte.img}
+              <p style="color: #74FF9E; font-weight: 600; font-size: 30px; text-align: center; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">${monte.text}</p>
+          </div>
+        </body>
+        
+    `;
+    const newWindow = window.open('', '_blank');
+    newWindow.document.write(monteInfo);
+    newWindow.document.close();
+}
