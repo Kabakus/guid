@@ -588,13 +588,85 @@ document.getElementById('shops2').addEventListener('click', async () => {
 
 function openMontePage(monte) {
     const monteInfo = `
-        <body style='background: url("https://github.com/Kabakus/kartinki/blob/main/BG.png?raw=true"); background-attachment: fixed; margin: 0px'>
-          <div class='body' style='height: 200vh; background: linear-gradient(180deg, rgba(252,208,0,0.8) 0%, rgba(244,101,254,0.8) 5%, rgba(0,149,255,0.8) 73%, rgba(0,153,41,0.8044467787114846) 96%);'>
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Loader Example</title>
+          <style>
+              .loader {
+                  position: sticky;
+                  width: 150px;
+                  height: 150px;
+                  left: 45%;
+                  top: 20%;
+                  
+
+                  .spinner {
+                      width: 100%;
+                      height: 100%;
+                      border: 30px solid transparent;
+                      border-top: 30px solid black;
+                      border-radius: 50%;
+                      animation: spin 1s linear infinite, changeColor 1s linear infinite;
+                  }
+              }
+
+              @keyframes spin {
+                  0% {
+                      transform: rotate(0deg);
+                  }
+                  100% {
+                      transform: rotate(360deg);
+                  }
+              }
+                  
+              @keyframes changeColor {
+                  0% {
+                      border-top-color: #3498db;
+                  }
+                  25% {
+                      border-top-color: #e74c3c;
+                  }
+                  50% {
+                      border-top-color: #f1c40f;
+                  }
+                  75% {
+                      border-top-color: #2ecc71;
+                  }
+                  100% {
+                      border-top-color: #3498db;
+                  }
+              }
+
+              .content {
+                  display: none;
+                  text-align: center;
+              }
+          </style>
+      </head>
+      <body style='background: url("https://github.com/Kabakus/kartinki/blob/main/BG.png?raw=true"); background-attachment: fixed; margin: 0px'>
+      <div class='body' style='height: 200vh; background: linear-gradient(180deg, rgba(252,208,0,0.8) 0%, rgba(244,101,254,0.8) 5%, rgba(0,149,255,0.8) 73%, rgba(0,153,41,0.8044467787114846) 96%);'>
+          <div class="loader" id="loader">
+              <div class="spinner"></div>
+          </div>
+          <div class="content" id="content">
               <h2 style="color: #F5F5DC; font-weight: 800; font-size: 64px; text-align: center; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">${monte.title}</h2>
               ${monte.img}
               <p style="color: #74FF9E; font-weight: 600; font-size: 30px; text-align: center; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">${monte.text}</p>
           </div>
-        </body>
+          <script>
+              window.onload = function() {
+                  const loader = document.getElementById('loader');
+                  const content = document.getElementById('content');
+
+                  setTimeout(() => {
+                      loader.style.display = 'none';
+                      content.style.display = 'block';
+                  }, 5000);
+              };
+          </script>
+      </div>
+      </body>
         
     `;
     const newWindow = window.open('', '_blank');
