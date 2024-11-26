@@ -370,8 +370,6 @@ function renderProducts(page) {
     const start = (page - 1) * productsPerPage;
     const end = start + productsPerPage;
     
-    
-
     products.forEach(product => product.style.display = 'none');
     const currentProducts = products.slice(start, end);
     currentProducts.forEach(product => product.style.display = 'block');
@@ -420,9 +418,7 @@ function search_guids() {
 renderProducts(currentPage);
 renderPagination();
 
-
-
-let ascending = true; 
+let turn = true; 
 
 
 document.getElementById('sortButton').addEventListener('click', function() {
@@ -433,27 +429,24 @@ document.getElementById('sortButton').addEventListener('click', function() {
     items.sort((a, b) => {
         const nameA = a.getAttribute('data-name');
         const nameB = b.getAttribute('data-name');
-        return ascending ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
+        return turn ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
         
     });
-
-    
-
-
     grid.innerHTML = '';
     items.forEach(item => grid.appendChild(item));
 
-    
-    if (ascending == false){
+    if (turn == false){
         SetName.innerText = 'Сортировать по возрастанию' ;
     }
     else{
         SetName.innerText = 'Сортировать по убыванию'
     }
     
-    ascending = !ascending;
+    turn = !turn;
 
 });
+
+
 
 const toggleFilterButton = document.getElementById('show-filters');
 const filterButtonsContainer = document.getElementById('filterButtons');
@@ -483,8 +476,7 @@ filterButtons.forEach(button => {
 });
 
 
-const apiUrl = 'https://673add6e339a4ce44519711d.mockapi.io/vrar/test'; // Замените на ваш URL
-
+const apiUrl = 'https://673add6e339a4ce44519711d.mockapi.io/vrar/test'; 
 
 async function getMonte(monteId) {
     const response = await fetch(`${apiUrl}/${monteId}`);

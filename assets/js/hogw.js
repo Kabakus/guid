@@ -295,7 +295,7 @@ filterButtons.forEach(button => {
 });
 
 
-const apiUrl = 'https://673add6e339a4ce44519711d.mockapi.io/vrar/test'; // Замените на ваш URL
+const apiUrl = 'https://673add6e339a4ce44519711d.mockapi.io/vrar/test'; 
 
 
 async function getMonte(monteId) {
