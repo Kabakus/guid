@@ -483,6 +483,7 @@ async function getMonte(monteId) {
     const data = await response.json();
     return data;
 }
+const data = getMonte();
 
 
 document.getElementById('city1').addEventListener('click', async () => {
@@ -643,7 +644,7 @@ function openMontePage(monte) {
           </div>
           <div class="content" id="content">
               <h2 style="color: #F5F5DC; font-weight: 800; font-size: 64px; text-align: center; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">${monte.title}</h2>
-              ${monte.img}
+              ${data[i].img}
               <p style="color: #74FF9E; font-weight: 600; font-size: 30px; text-align: center; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">${monte.text}</p>
           </div>
           <script>
@@ -665,3 +666,6 @@ function openMontePage(monte) {
     newWindow.document.write(monteInfo);
     newWindow.document.close();
 }
+
+
+
