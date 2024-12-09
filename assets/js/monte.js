@@ -1,29 +1,16 @@
 'use strict';
 
 
-var modal = document.getElementById('myModal');
-
-
-var btn = document.getElementById("myBtn");
-
-
-
-var span = document.getElementsByClassName("modal__close")[0];
-
-
+let modal = document.getElementById('myModal');
+let btn = document.getElementById("myBtn");
+let span = document.getElementsByClassName("modal__close")[0];
 
 btn.onclick = function() {
     modal.style.display = "block";
-    
 }
-
-
-
 span.onclick = function() {
     modal.style.display = "none";
 }
-
-
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
@@ -31,31 +18,17 @@ window.onclick = function(event) {
 }
 
 
-
-
-
-
-var modale = document.getElementById('modelener');
-
-
-var btne = document.getElementById("myenter");
-
-
-var spane = document.getElementsByClassName("eclose")[0];
-
-
+let modale = document.getElementById('modelener');
+let btne = document.getElementById("myenter");
+let spane = document.getElementsByClassName("eclose")[0];
 
 btne.onclick = function() {
     modale.style.display = "block";
     modall.style.display = "none";
 }
-
-
 spane.onclick = function() {
     modale.style.display = "none";
 }
-
-
 window.onclick = function(event) {
     if (event.target == modale) {
         modale.style.display = "none";
@@ -63,29 +36,17 @@ window.onclick = function(event) {
 }
 
 
-
-
-var modall = document.getElementById('modelelog');
-
-
-var btnl = document.getElementById("myreg");
-
-
-
-var spanl = document.getElementsByClassName("lclose")[0];
-
+let modall = document.getElementById('modelelog');
+let btnl = document.getElementById("myreg");
+let spanl = document.getElementsByClassName("lclose")[0];
 
 btnl.onclick = function() {
     modall.style.display = "block";
     modale.style.display = "none";
 }
-
-
 spanl.onclick = function() {
     modall.style.display = "none";
 }
-
-
 window.onclick = function(event) {
     if (event.target == modall) {
         modall.style.display = "none";
@@ -93,7 +54,7 @@ window.onclick = function(event) {
 }
 
 
-var btncl = document.getElementById("myclose");
+let btncl = document.getElementById("myclose");
 
 btncl.onclick = function() {
     modall.style.display = "none";
@@ -108,29 +69,17 @@ function menuOnClick() {
 }
 
 
-var modalu = document.getElementById('myModalu');
-
-
-var btnu = document.getElementById("myBtnu");
-
-
-
-var spanu = document.getElementsByClassName("modalu__close")[0];
-
-
+let modalu = document.getElementById('myModalu');
+let btnu = document.getElementById("myBtnu");
+let spanu = document.getElementsByClassName("modalu__close")[0];
 
 btnu.onclick = function() {
     modalu.style.display = "block";
     
 }
-
-
-
 spanu.onclick = function() {
     modalu.style.display = "none";
 }
-
-
 window.onclick = function(event) {
     if (event.target == modalu) {
         modalu.style.display = "none";
@@ -138,36 +87,17 @@ window.onclick = function(event) {
 }
   
 
-
-
-
-
-
-  
-
-
-var modala = document.getElementById('about');
-
-
-var btna = document.getElementById("about-btn");
-
-
-var spana = document.getElementsByClassName("about__closex")[0];
-
-
+let modala = document.getElementById('about');
+let btna = document.getElementById("about-btn");
+let spana = document.getElementsByClassName("about__closex")[0];
 
 btna.onclick = function() {
     modala.style.display = "block";
     
 }
-
-
-
 spana.onclick = function() {
     modala.style.display = "none";
 }
-
-
 window.onclick = function(event) {
     if (event.target == modala) {
         modala.style.display = "none";
@@ -175,141 +105,84 @@ window.onclick = function(event) {
 }
 
 
-
-var modalchg1 = document.getElementById('monte1');
-
-
-var btnchg1 = document.getElementById("monte-1");
-
-
-var spanchg1 = document.getElementsByClassName("monte1__closex")[0];
-
-
+let modalchg1 = document.getElementById('monte1');
+let btnchg1 = document.getElementById("monte-1");
+let spanchg1 = document.getElementsByClassName("monte1__closex")[0];
 
 btnchg1.onclick = function() {
-    modalchg1.style.display = "block";
-    
+    modalchg1.style.display = "block"; 
 }
-
-
-
 spanchg1.onclick = function() {
     modalchg1.style.display = "none";
 }
-
-
 window.onclick = function(event) {
     if (event.target == modalchg1) {
         modalchg1.style.display = "none";
     }
 }
 
-var modalchg2 = document.getElementById('monte2');
 
-
-var btnchg2 = document.getElementById("monte-2");
-
-
-var spanchg2 = document.getElementsByClassName("monte2__closex")[0];
-
-
+let modalchg2 = document.getElementById('monte2');
+let btnchg2 = document.getElementById("monte-2");
+let spanchg2 = document.getElementsByClassName("monte2__closex")[0];
 
 btnchg2.onclick = function() {
     modalchg2.style.display = "block";
-    
 }
-
-
-
 spanchg2.onclick = function() {
     modalchg2.style.display = "none";
 }
-
-
 window.onclick = function(event) {
     if (event.target == modalchg2) {
         modalchg2.style.display = "none";
     }
 }
 
-var modalchg3 = document.getElementById('monte3');
 
-
-var btnchg3 = document.getElementById("monte-3");
-
-
-var spanchg3 = document.getElementsByClassName("monte3__closex")[0];
-
-
+let modalchg3 = document.getElementById('monte3');
+let btnchg3 = document.getElementById("monte-3");
+let spanchg3 = document.getElementsByClassName("monte3__closex")[0];
 
 btnchg3.onclick = function() {
     modalchg3.style.display = "block";
-    
 }
-
-
-
 spanchg3.onclick = function() {
     modalchg3.style.display = "none";
 }
-
-
 window.onclick = function(event) {
     if (event.target == modalchg3) {
         modalchg3.style.display = "none";
     }
 }
 
-var modalchg4 = document.getElementById('monte4');
 
-
-var btnchg4 = document.getElementById("monte-4");
-
-
-var spanchg4 = document.getElementsByClassName("monte4__closex")[0];
-
-
+let modalchg4 = document.getElementById('monte4');
+let btnchg4 = document.getElementById("monte-4");
+let spanchg4 = document.getElementsByClassName("monte4__closex")[0];
 
 btnchg4.onclick = function() {
     modalchg4.style.display = "block";
-    
 }
-
-
-
 spanchg4.onclick = function() {
     modalchg4.style.display = "none";
 }
-
-
 window.onclick = function(event) {
     if (event.target == modalchg4) {
         modalchg4.style.display = "none";
     }
 }
 
-var modalchg5 = document.getElementById('monte5');
 
-
-var btnchg5 = document.getElementById("monte-5");
-
-
-var spanchg5 = document.getElementsByClassName("monte5__closex")[0];
-
-
+let modalchg5 = document.getElementById('monte5');
+let btnchg5 = document.getElementById("monte-5");
+let spanchg5 = document.getElementsByClassName("monte5__closex")[0];
 
 btnchg5.onclick = function() {
     modalchg5.style.display = "block";
-    
 }
-
-
-
 spanchg5.onclick = function() {
     modalchg5.style.display = "none";
 }
-
-
 window.onclick = function(event) {
     if (event.target == modalchg5) {
         modalchg5.style.display = "none";
@@ -317,49 +190,38 @@ window.onclick = function(event) {
 }
 
 
-var modalchg6 = document.getElementById('monte6');
-var btnchg6 = document.getElementById("monte-6");
-var spanchg6 = document.getElementsByClassName("monte6__closex")[0];
-
-
+let modalchg6 = document.getElementById('monte6');
+let btnchg6 = document.getElementById("monte-6");
+let spanchg6 = document.getElementsByClassName("monte6__closex")[0];
 
 btnchg6.onclick = function() {
     modalchg6.style.display = "block";
-    
 }
-
 spanchg6.onclick = function() {
     modalchg6.style.display = "none";
 }
-
 window.onclick = function(event) {
     if (event.target == modalchg6) {
         modalchg6.style.display = "none";
     }
 }
 
-var modalchg7 = document.getElementById('monte7');
-var btnchg7 = document.getElementById("monte-7");
-var spanchg7 = document.getElementsByClassName("monte7__closex")[0];
+
+let modalchg7 = document.getElementById('monte7');
+let btnchg7 = document.getElementById("monte-7");
+let spanchg7 = document.getElementsByClassName("monte7__closex")[0];
 
 btnchg7.onclick = function() {
     modalchg7.style.display = "block";
-    
 }
-
-
-
 spanchg7.onclick = function() {
     modalchg7.style.display = "none";
 }
-
-
 window.onclick = function(event) {
     if (event.target == modalchg7) {
         modalchg7.style.display = "none";
     }
 }
-
 
 
 const products = Array.from(document.querySelectorAll('.place__grid-el'));
