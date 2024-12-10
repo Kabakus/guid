@@ -1,108 +1,53 @@
 'use strict';
 
+class ModalWindow {
+    constructor(modalId, buttonId, closeClass) {
+        this.modal = document.getElementById(modalId);
+        this.btn = document.getElementById(buttonId);
+        this.closeButton = document.getElementsByClassName(closeClass)[0];
+        this.func();
+    }
 
-let modal = document.getElementById('myModal');
-let btn = document.getElementById("myBtn");
-let span = document.getElementsByClassName("modal__close")[0];
+    func() {
+        this.btn.onclick = () => this.open();
+        this.closeButton.onclick = () => this.close();
+        window.onclick = (event) => this.windowclose(event);
+    }
 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-span.onclick = function() {
-    modal.style.display = "none";
-}
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+    open() {
+        this.modal.style.display = "block";
+    }
+
+    close() {
+        this.modal.style.display = "none";
+    }
+
+    windowclose(event) {
+        if (event.target === this.modal) {
+            this.close();
+        }
     }
 }
 
+const myModal = new ModalWindow('myModal', 'myBtn', 'modal__close');
+const myModalMenu = new ModalWindow('myModalu', 'myBtnu', 'modalu__close');
+const myModalAbout = new ModalWindow('about', 'about-btn', 'about__closex');
 
-let modale = document.getElementById('modelener');
-let btne = document.getElementById("myenter");
-let spane = document.getElementsByClassName("eclose")[0];
 
-btne.onclick = function() {
-    modale.style.display = "block";
-    modall.style.display = "none";
-}
-spane.onclick = function() {
-    modale.style.display = "none";
-}
-window.onclick = function(event) {
-    if (event.target == modale) {
-        modale.style.display = "none";
+class Menu{
+    constructor(){
+        this.bar = document.getElementById("menu-bar");
+        this.nav = document.getElementById("nav");
+        this.bg = document.getElementById("menu-bg");
+    };
+    menuOnClick() {
+        this.bar.classList.toggle("menu__change");
+        this.nav.classList.toggle("menu__change");
+        this.bg.classList.toggle("change-bg");
     }
 }
-
-
-let modall = document.getElementById('modelelog');
-let btnl = document.getElementById("myreg");
-let spanl = document.getElementsByClassName("lclose")[0];
-
-btnl.onclick = function() {
-    modall.style.display = "block";
-    modale.style.display = "none";
-}
-spanl.onclick = function() {
-    modall.style.display = "none";
-}
-window.onclick = function(event) {
-    if (event.target == modall) {
-        modall.style.display = "none";
-    }
-}
-
-
-let btncl = document.getElementById("myclose");
-
-btncl.onclick = function() {
-    modall.style.display = "none";
-    modale.style.display = "block";
-}
-
-
-function menuOnClick() {
-    document.getElementById("menu-bar").classList.toggle("menu__change");
-    document.getElementById("nav").classList.toggle("menu__change");
-    document.getElementById("menu-bg").classList.toggle("change-bg");
-}
-
-
-let modalu = document.getElementById('myModalu');
-let btnu = document.getElementById("myBtnu");
-let spanu = document.getElementsByClassName("modalu__close")[0];
-
-btnu.onclick = function() {
-    modalu.style.display = "block";
-    
-}
-spanu.onclick = function() {
-    modalu.style.display = "none";
-}
-window.onclick = function(event) {
-    if (event.target == modalu) {
-        modalu.style.display = "none";
-    }
-}
-  
-
-let modala = document.getElementById('about');
-let btna = document.getElementById("about-btn");
-let spana = document.getElementsByClassName("about__closex")[0];
-
-btna.onclick = function() {
-    modala.style.display = "block";
-    
-}
-spana.onclick = function() {
-    modala.style.display = "none";
-}
-window.onclick = function(event) {
-    if (event.target == modala) {
-        modala.style.display = "none";
-    }
-}
+let menuopen = new Menu
+menuopen.menuOnClick
 
 
 let modalchg1 = document.getElementById('monte1');
