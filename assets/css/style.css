@@ -44,6 +44,11 @@ body {
   background-attachment: fixed;
 }
 
+.win {
+  margin: auto 50%;
+  max-width: 1170px;
+}
+
 .mapy {
   border-top: 5px solid #2E0057;
 }
