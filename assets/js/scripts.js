@@ -36,7 +36,6 @@ const myModalAbout = new ModalWindow('about', 'about-btn', 'about__closex');
 const myModalWay = new ModalWindow('myModalex', 'myBtnex', 'modalex__closex');
 
 
-
 class Menu{
     constructor(){
         this.bar = document.getElementById("menu-bar");
@@ -51,8 +50,6 @@ class Menu{
 }
 let menuopen = new Menu
 menuopen.menuOnClick
-
-
 
 
 class Slider {

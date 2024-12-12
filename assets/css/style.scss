@@ -131,6 +131,7 @@ body{
     cursor: pointer;
     border: none;
 }
+
 .enter{
     display: none; 
     position: fixed; 
@@ -242,12 +243,12 @@ body{
     }
 }
 
-
 #myreg{
     background: none;
     cursor: pointer;
     border: none;
 }
+
 .log{
     display: none; 
     position: fixed; 
@@ -358,6 +359,7 @@ body{
         width: 98%;
     }
 }
+
 #myclose{
     background: none;
     cursor: pointer;
@@ -525,34 +527,34 @@ body{
     }
   }
 }
-  .menu-bg, #menu {
-    top: 0;
-    left: 0;
-    position: fixed;
 
-  }
-  .menu-bg {
-    z-index: 1;
-    width: 0;
-    height: 0;
-    margin: 30px 0 20px 20px;
-    background: radial-gradient(circle,#0095FF, #F465FE, #FCD000, #FCD000);
-    border-radius: 50%;
-    transition: 0.3s ease;
-  }   
-  .change-bg {
-    width: 520px;
-    height: 460px;
-    transform: translate(-60%,-30%);
-  }
+.menu-bg, #menu {
+  top: 0;
+  left: 0;
+  position: fixed;
+}
 
+.menu-bg {
+  z-index: 1;
+  width: 0;
+  height: 0;
+  margin: 30px 0 20px 20px;
+  background: radial-gradient(circle,#0095FF, #F465FE, #FCD000, #FCD000);
+  border-radius: 50%;
+  transition: 0.3s ease;
+}   
 
+.change-bg {
+  width: 520px;
+  height: 460px;
+  transform: translate(-60%,-30%);
+}
 
 #myBtnu {
     background: none;
     cursor: pointer;
     border: none;
-  }
+}
   
 .modalu {
     display: none; 
@@ -634,89 +636,87 @@ body{
   }
 }
 
-  #slider__slides{
-    position: relative;
-    height: 615px;
-    padding: 0px;
-    margin: 0px;
-    list-style-type: none;
-  }
-  .slider{
-    margin-top: 30px;
-    &__slide{
-      position: absolute;
-      left: 0px;
-      top: 0px;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      z-index: -1;
-      -webkit-transition: opacity 1s;
-      -moz-transition: opacity 1s;
-      -o-transition: opacity 1s;
-      transition: opacity 1s;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0px 0px 15px 30px rgba(34, 60, 80, 0.2);
-      &:nth-of-type(1){
-        background: url('https://github.com/Kabakus/kartinki/blob/main/1scroll%20(1).png?raw=true') no-repeat center center / cover;
-      }
-      &:nth-of-type(2){
-        background:url('https://github.com/Kabakus/kartinki/blob/main/2scroll%20(1).png?raw=true') no-repeat center center / cover;
-      }
-      &:nth-of-type(3){
-        background:url('https://github.com/Kabakus/kartinki/blob/main/3scroll%20(1).png?raw=true') no-repeat center center / cover;
-      }
-      &:nth-of-type(4){
-        background:url('https://github.com/Kabakus/kartinki/blob/main/4scroll%20(1).png?raw=true') no-repeat center center / cover;
-      }
-      &:nth-of-type(5){
-        background:url('https://github.com/Kabakus/kartinki/blob/main/5scroll%20(1).png?raw=true') no-repeat center center / cover;
-      }
-  
-    }
-    
-    & .showing{
-      opacity: 1;
-      z-index: 0;
-    }
-
-    &__title{
-      position: relative;
-      color: #fff;
-      font-weight: 800;
-      font-size: 64px;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-      width: 500px;
-      text-align: start;
-      margin-top: 50px;
-      margin-left: 70px;
-      
-    }
-    &__link{
-      position: relative;
-      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-      background-color: #50F4D9 ;
-      border-radius: 20px;
-      font-weight: 800;
-      font-size: 36px;
-      color: #000;
-      padding: 20px 0px;
-      text-align: center;
-      width: 460px;
-      margin-top: 15px;
-      margin-left: 70px;
-      
-    }
+#slider__slides{
+  position: relative;
+  height: 615px;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
 }
-  
+.slider{
+  margin-top: 30px;
+  &__slide{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -1;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 15px 30px rgba(34, 60, 80, 0.2);
+    &:nth-of-type(1){
+      background: url('https://github.com/Kabakus/kartinki/blob/main/1scroll%20(1).png?raw=true') no-repeat center center / cover;
+    }
+    &:nth-of-type(2){
+      background:url('https://github.com/Kabakus/kartinki/blob/main/2scroll%20(1).png?raw=true') no-repeat center center / cover;
+    }
+    &:nth-of-type(3){
+      background:url('https://github.com/Kabakus/kartinki/blob/main/3scroll%20(1).png?raw=true') no-repeat center center / cover;
+    }
+    &:nth-of-type(4){
+      background:url('https://github.com/Kabakus/kartinki/blob/main/4scroll%20(1).png?raw=true') no-repeat center center / cover;
+    }
+    &:nth-of-type(5){
+      background:url('https://github.com/Kabakus/kartinki/blob/main/5scroll%20(1).png?raw=true') no-repeat center center / cover;
+    }
 
-  
-  
-  #sliderMap {
-    cursor: pointer;
-    border: none;
   }
+  
+  & .showing{
+    opacity: 1;
+    z-index: 0;
+  }
+
+  &__title{
+    position: relative;
+    color: #fff;
+    font-weight: 800;
+    font-size: 64px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    width: 500px;
+    text-align: start;
+    margin-top: 50px;
+    margin-left: 70px;
+    
+  }
+  &__link{
+    position: relative;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    background-color: #50F4D9 ;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 36px;
+    color: #000;
+    padding: 20px 0px;
+    text-align: center;
+    width: 460px;
+    margin-top: 15px;
+    margin-left: 70px;
+    
+  }
+}
+
+#sliderMap {
+  cursor: pointer;
+  border: none;
+}
+
 
 .modals {
     display: none; 
@@ -1150,6 +1150,7 @@ body{
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   }
 }
+
 .about{
   display: none; 
   position: fixed; 
@@ -1356,8 +1357,8 @@ body{
     } 
 }
 
-// MONTE
 
+// MONTE
 .header_monte{
   height: 1100px;
   padding-top: 50px;
@@ -1588,8 +1589,8 @@ body{
 }
 
 .pagination {
-margin-top: 20px;
-text-align: center;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .page-item {
@@ -1736,8 +1737,6 @@ text-align: center;
 
 
 // HOGW
-
-
 .header_hogw{
   height: 1100px;
   padding-top: 50px;
@@ -1816,6 +1815,7 @@ text-align: center;
     margin-top: 28%;
   }
 }
+
 .png_hogw{
   height: 800px;
   margin-top: 200px;
@@ -1825,8 +1825,6 @@ text-align: center;
 
 
 // hillw
-
-
 .header_hill{
   height: 1100px;
   padding-top: 50px;
@@ -2051,7 +2049,7 @@ text-align: center;
   gap: 20px;
 }
   
-  .product {
+.product {
   border: 1px solid #ccc;
   padding: 10px;
   width: 200px;

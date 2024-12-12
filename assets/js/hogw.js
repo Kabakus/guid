@@ -7,21 +7,17 @@ class ModalWindow {
         this.closeButton = document.getElementsByClassName(closeClass)[0];
         this.func();
     }
-
     func() {
         this.btn.onclick = () => this.open();
         this.closeButton.onclick = () => this.close();
         window.onclick = (event) => this.windowclose(event);
     }
-
     open() {
         this.modal.style.display = "block";
     }
-
     close() {
         this.modal.style.display = "none";
     }
-
     windowclose(event) {
         if (event.target === this.modal) {
             this.close();
