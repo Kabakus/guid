@@ -46,429 +46,256 @@ let menuopen = new Menu
 menuopen.menuOnClick
 
 
-let modalchg1 = document.getElementById('monte1');
-let btnchg1 = document.getElementById("monte-1");
-let spanchg1 = document.getElementsByClassName("monte1__closex")[0];
+class ApiService {
+    constructor(apiUrl) {
+        this.apiUrl = apiUrl;
+    }
 
-btnchg1.onclick = function() {
-    modalchg1.style.display = "block"; 
-}
-spanchg1.onclick = function() {
-    modalchg1.style.display = "none";
-}
-window.onclick = function(event) {
-    if (event.target == modalchg1) {
-        modalchg1.style.display = "none";
+
+    async fetchData(page = 1, limit = 4, sortBy = '', order = 'asc', filters = {}, search = '') {
+
+        const queryParams = new URLSearchParams({
+            page,
+            limit,
+            sortBy,
+            order,
+            ...filters,  
+            search,  
+        }).toString();
+
+        const response = await fetch(`${this.apiUrl}?${queryParams}`);
+        return await response.json();
     }
 }
 
-
-let modalchg2 = document.getElementById('monte2');
-let btnchg2 = document.getElementById("monte-2");
-let spanchg2 = document.getElementsByClassName("monte2__closex")[0];
-
-btnchg2.onclick = function() {
-    modalchg2.style.display = "block";
-}
-spanchg2.onclick = function() {
-    modalchg2.style.display = "none";
-}
-window.onclick = function(event) {
-    if (event.target == modalchg2) {
-        modalchg2.style.display = "none";
-    }
-}
-
-
-let modalchg3 = document.getElementById('monte3');
-let btnchg3 = document.getElementById("monte-3");
-let spanchg3 = document.getElementsByClassName("monte3__closex")[0];
-
-btnchg3.onclick = function() {
-    modalchg3.style.display = "block";
-}
-spanchg3.onclick = function() {
-    modalchg3.style.display = "none";
-}
-window.onclick = function(event) {
-    if (event.target == modalchg3) {
-        modalchg3.style.display = "none";
-    }
-}
-
-
-let modalchg4 = document.getElementById('monte4');
-let btnchg4 = document.getElementById("monte-4");
-let spanchg4 = document.getElementsByClassName("monte4__closex")[0];
-
-btnchg4.onclick = function() {
-    modalchg4.style.display = "block";
-}
-spanchg4.onclick = function() {
-    modalchg4.style.display = "none";
-}
-window.onclick = function(event) {
-    if (event.target == modalchg4) {
-        modalchg4.style.display = "none";
-    }
-}
-
-
-let modalchg5 = document.getElementById('monte5');
-let btnchg5 = document.getElementById("monte-5");
-let spanchg5 = document.getElementsByClassName("monte5__closex")[0];
-
-btnchg5.onclick = function() {
-    modalchg5.style.display = "block";
-}
-spanchg5.onclick = function() {
-    modalchg5.style.display = "none";
-}
-window.onclick = function(event) {
-    if (event.target == modalchg5) {
-        modalchg5.style.display = "none";
-    }
-}
-
-
-let modalchg6 = document.getElementById('monte6');
-let btnchg6 = document.getElementById("monte-6");
-let spanchg6 = document.getElementsByClassName("monte6__closex")[0];
-
-btnchg6.onclick = function() {
-    modalchg6.style.display = "block";
-}
-spanchg6.onclick = function() {
-    modalchg6.style.display = "none";
-}
-window.onclick = function(event) {
-    if (event.target == modalchg6) {
-        modalchg6.style.display = "none";
-    }
-}
-
-
-let modalchg7 = document.getElementById('monte7');
-let btnchg7 = document.getElementById("monte-7");
-let spanchg7 = document.getElementsByClassName("monte7__closex")[0];
-
-btnchg7.onclick = function() {
-    modalchg7.style.display = "block";
-}
-spanchg7.onclick = function() {
-    modalchg7.style.display = "none";
-}
-window.onclick = function(event) {
-    if (event.target == modalchg7) {
-        modalchg7.style.display = "none";
-    }
-}
-
-
-const products = Array.from(document.querySelectorAll('.place__grid-el'));
-const productsPerPage = 4; 
-let currentPage = 1;
-
-function renderProducts(page) {
-    const start = (page - 1) * productsPerPage;
-    const end = start + productsPerPage;
+class App {
     
-    products.forEach(product => product.style.display = 'none');
-    const currentProducts = products.slice(start, end);
-    currentProducts.forEach(product => product.style.display = 'block');
-}
-
-function renderPagination() {
-    const pageCount = Math.ceil(products.length / productsPerPage);
-    const pagination = document.getElementById('pagination');
-    pagination.innerHTML = '';
-
-    for (let i = 1; i <= pageCount; i++) {
-        const pageItem = document.createElement('span');
-        pageItem.className = 'page-item' + (i === currentPage ? ' active' : '');
-        pageItem.textContent = i;
-        pageItem.onclick = () => {
-            currentPage = i;
-            renderProducts(currentPage);
-            renderPagination();
-        };
-        pagination.appendChild(pageItem);
+    constructor(apiService) { 
+        this.apiService = apiService;
+        this.appElement = document.getElementById('app');
+        this.currentPage = 1;
+        this.totalItems = 0; 
+        this.limit = 4; 
+        this.sortBy = 'id'; 
+        this.order = 'asc'; 
+        this.filters = {}; 
+        this.searchQuery = ''; 
+        this.paginItems = 0;
     }
-}
-
-function search_guids() {
-    let input = document.getElementById('searchbar').value
-    input = input.toLowerCase();
-    let x = document.getElementsByClassName('place__grid-el');
-    let h = 0;
-         
-         
-    for (h = 0; h < x.length; h++) {
-        if (!x[h].innerHTML.toLowerCase().includes(input)) {
-            x[h].style.display = "none";
-        }
-        else if (input == 0) {
-            x[h].style.display = renderProducts(currentPage);
-            pagination.style.display = 'block'
-        }
-        else if(x[h].innerHTML.toLowerCase().includes(input)) {
-            x[h].style.display = "block";
-            pagination.style.display = 'none'
-        }
-    }
-}
-
-renderProducts(currentPage);
-renderPagination();
-
-let turn = true; 
 
 
-document.getElementById('sortButton').addEventListener('click', function() {
-    const grid = document.getElementById('grid_places');
-    const items = Array.from(grid.getElementsByClassName('place__grid-el'));
-    let SetName = document.getElementById('sortButton')
-
-    items.sort((a, b) => {
-        const nameA = a.getAttribute('data-name');
-        const nameB = b.getAttribute('data-name');
-        return turn ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
+    async homePage() {
+        const data = await this.apiService.fetchData(this.currentPage, this.limit, this.sortBy, this.order, this.filters, this.searchQuery);
         
-    });
-    grid.innerHTML = '';
-    items.forEach(item => grid.appendChild(item));
+        if (!data || !Array.isArray(data) || data.length === 0) {
+            this.appElement.innerHTML = '<h1>Данные не найдены</h1>';
+            return;
+        }
 
-    if (turn == false){
-        SetName.innerText = 'Сортировать по возрастанию' ;
+        
+        const totalData = await this.apiService.fetchData(1, 30, this.sortBy, this.order, this.filters, this.searchQuery); 
+
+        this.paginItems = totalData.length; 
+        this.totalItems = data.length; 
+
+        this.appElement.innerHTML = `
+            <h1>Список данных</h1>
+            <label for="sort">Сортировать по:</label>
+            <select id="sort" onchange="app.changeSort()">
+                <option value="id" ${this.sortBy == 'id' ? 'selected' : ''}>ID</option>
+                <option value="title" ${this.sortBy == 'title' ? 'selected' : ''}>Заголовок</option>
+            </select>
+            <label for="district">Фильтр по популярности:</label>
+            <select id="district" onchange="app.changeFilter()">
+                <option value="">Все</option>
+                <option value="district1" ${this.filters.district == 'district1' ? 'selected' : ''}>Популярные</option>
+                <option value="district2" ${this.filters.district == 'district2' ? 'selected' : ''}>Непопулярные</option>
+            </select>
+            <label for="search">Поиск по названию:</label>
+            <input type="text" id="search" placeholder="Введите название" oninput="app.changeSearch()" value="${this.searchQuery}">
+            <div id="data-list">
+                ${data.map(item => `
+                    <div class="item" data-item='${JSON.stringify(item)}' onclick="app.viewDetails(this)">
+                        <p>${item.img}</p>
+                        <h2>${item.title}</h2>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        this.renderPagination();
     }
-    else{
-        SetName.innerText = 'Сортировать по убыванию'
+
+
+    async changeSearch() {
+        const searchInput = document.getElementById('search');
+        this.searchQuery = searchInput.value; 
+        this.currentPage = 1; 
+        await this.homePage(); 
+    }
+
+
+    async changeSort() {
+        const select = document.getElementById('sort');
+        this.sortBy = select.value;
+        this.currentPage = 1; 
+        await this.homePage();
+    }
+
+ 
+    async changeFilter() {
+        const select = document.getElementById('district');
+        const district = select.value; 
+
+        this.filters.district = district; 
+
+        this.currentPage = 1; 
+        await this.homePage();
+    }
+
+
+    renderPagination() {
+        const pagination = document.createElement('div');
+        pagination.className = 'pagination';
+
+        const totalPages = Math.ceil(this.paginItems / this.limit);
+
+    
+        if (this.currentPage > 1) {
+            const prevButton = document.createElement('button');
+            prevButton.innerText = 'Предыдущая';
+            prevButton.onclick = () => this.changePage(this.currentPage - 1);
+            pagination.appendChild(prevButton);
+        }
+
+
+        if (this.currentPage < totalPages) {
+            const nextButton = document.createElement('button');
+            nextButton.innerText = 'Следующая';
+            nextButton.onclick = () => this.changePage(this.currentPage + 1);
+            pagination.appendChild(nextButton);
+        }
+
+        this.appElement.appendChild(pagination);
+    }
+
+
+    async changePage(page) {
+        this.currentPage = page;
+        await this.homePage();
+    }
+
+
+    async detailsPage(item) {
+        if (item) {
+            this.appElement.innerHTML = `
+                <h1>${item.title}</h1>
+                <p class="itemin">${item.img}</p>
+                <h3>${item.text}</h3>
+                <div id="review-section"></div>
+                <button class="button-reol" onclick="app.goBack()">Назад</button>
+            `;
+            new ReviewSystem('review-section', item.id);
+        } else {
+            this.appElement.innerHTML = `
+                <h1>Данные не найдены</h1>
+                <button  onclick="app.goBack()">Назад</button>
+            `;
+        }
     }
     
-    turn = !turn;
 
-});
+    viewDetails(element) {
+        const item = JSON.parse(element.getAttribute('data-item'));
+        history.pushState({ item }, '', `/details/${item.id}`);
+        this.detailsPage(item);
+    }
+    
 
-
-
-const toggleFilterButton = document.getElementById('show-filters');
-const filterButtonsContainer = document.getElementById('filterButtons');
-const filterButtons = document.querySelectorAll('.place__filter-button');
-const gridItems = document.querySelectorAll('.place__grid-el');
-
-
-toggleFilterButton.addEventListener('click', function() {
-    const isVisible = filterButtonsContainer.style.display === 'block';
-    filterButtonsContainer.style.display = isVisible ? 'none' : 'block';
-    toggleFilterButton.textContent = isVisible ? 'Показать фильтры' : 'Скрыть фильтры';
-});
+    goBack() {
+        history.pushState(null, '', '/monte.html');
+        this.currentPage = 1; 
+        this.homePage();
+    }
+}
 
 
-filterButtons.forEach(button => {
-    button.addEventListener('click', function() {
-        const filterValue = this.getAttribute('data-filter');
+window.onpopstate = function(event) {
+    if (event.state) {
+        app.detailsPage(event.state.item);
+    } else {
+        app.currentPage = 1; 
+        app.homePage();
+    }
+};
 
-        gridItems.forEach(item => {
-            if (item.classList.contains(filterValue)) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
-            }
+class ReviewSystem {
+    constructor(containerId, dataId) {
+        this.container = document.getElementById(containerId);
+        this.dataId = dataId;
+        this.reviewsStorage = JSON.parse(localStorage.getItem('reviews')) || {};
+        this.reviews = this.reviewsStorage[dataId] || [];
+        this.render();
+    }
+
+    saveReviews() {
+        this.reviewsStorage[this.dataId] = this.reviews;
+        localStorage.setItem('reviews', JSON.stringify(this.reviewsStorage));
+    }
+
+    addReview(review) {
+        if (review && review.trim().length > 0) {
+            this.reviews.push(review);
+            this.saveReviews();
+            this.render();
+        }
+    }
+
+    deleteReview(index) {
+        this.reviews.splice(index, 1);
+        this.saveReviews();
+        this.render();
+    }
+
+    render() {
+        this.container.innerHTML = `
+            <h2>Отзывы</h2>
+            <div id="reviews-list">
+                ${this.reviews.length > 0 
+                    ? this.reviews.map((r, i) => `
+                        <p>
+                            <strong>Отзыв ${i + 1}:</strong> ${r}
+                            <button class="delete-review" data-index="${i}">Удалить</button>
+                        </p>
+                    `).join('')
+                    : '<h4>Пока нет отзывов. Будьте первым!</h4>'}
+            </div>
+            <div class="review-box">
+                <textarea id="review-input" placeholder="Введите ваш отзыв"></textarea>
+                <button id="submit-review">Оставить отзыв</button>
+            </div>
+        `;
+
+        document.getElementById('submit-review').onclick = () => {
+            const input = document.getElementById('review-input');
+            this.addReview(input.value);
+            input.value = '';
+        };
+
+        document.querySelectorAll('.delete-review').forEach(button => {
+            button.onclick = (event) => {
+                const index = event.target.dataset.index;
+                this.deleteReview(index);
+            };
         });
-    });
-});
-
+    }
+}
 
 const apiUrl = 'https://673add6e339a4ce44519711d.mockapi.io/vrar/test'; 
-
-async function getMonte(monteId) {
-    const response = await fetch(`${apiUrl}/${monteId}`);
-    const data = await response.json();
-    return data;
-}
-const data = getMonte();
+const apiService = new ApiService(apiUrl);
+const app = new App(apiService);
 
 
-document.getElementById('city1').addEventListener('click', async () => {
-    const monteId = 1; 
-    const monte = await getMonte(monteId);
-    openMontePage(monte);
-});
-document.getElementById('city2').addEventListener('click', async () => {
-    const monteId = 2; 
-    const monte = await getMonte(monteId);
-    openMontePage(monte);
-});
-document.getElementById('city3').addEventListener('click', async () => {
-    const monteId = 3; 
-    const monte = await getMonte(monteId);
-    openMontePage(monte);
-});
-document.getElementById('hotels1').addEventListener('click', async () => {
-    const monteId = 4; 
-    const monte = await getMonte(monteId);
-    openMontePage(monte);
-});
-document.getElementById('hotels2').addEventListener('click', async () => {
-    const monteId = 5; 
-    const monte = await getMonte(monteId);
-    openMontePage(monte);
-});
-document.getElementById('parks1').addEventListener('click', async () => {
-    const monteId = 6; 
-    const monte = await getMonte(monteId);
-    openMontePage(monte);
-});
-document.getElementById('parks2').addEventListener('click', async () => {
-    const monteId = 7; 
-    const monte = await getMonte(monteId);
-    openMontePage(monte);
-});
-document.getElementById('parks3').addEventListener('click', async () => {
-    const monteId = 8; 
-    const monte = await getMonte(monteId);
-    openMontePage(monte);
-});
-document.getElementById('interests1').addEventListener('click', async () => {
-    const monteId = 9; 
-    const monte = await getMonte(monteId);
-    openMontePage(monte);
-});
-document.getElementById('interests2').addEventListener('click', async () => {
-    const monteId = 10; 
-    const monte = await getMonte(monteId);
-    openMontePage(monte);
-});
-document.getElementById('interests3').addEventListener('click', async () => {
-    const monteId = 11; 
-    const monte = await getMonte(monteId);
-    openMontePage(monte);
-});
-document.getElementById('beaches1').addEventListener('click', async () => {
-    const monteId = 12; 
-    const monte = await getMonte(monteId);
-    openMontePage(monte);
-});
-document.getElementById('beaches2').addEventListener('click', async () => {
-    const monteId = 13; 
-    const monte = await getMonte(monteId);
-    openMontePage(monte);
-});
-document.getElementById('beaches3').addEventListener('click', async () => {
-    const monteId = 14; 
-    const monte = await getMonte(monteId);
-    openMontePage(monte);
-});
-document.getElementById('resturants1').addEventListener('click', async () => {
-    const monteId = 15; 
-    const monte = await getMonte(monteId);
-    openMontePage(monte);
-});
-document.getElementById('resturants2').addEventListener('click', async () => {
-    const monteId = 16; 
-    const monte = await getMonte(monteId);
-    openMontePage(monte);
-});
-document.getElementById('shops1').addEventListener('click', async () => {
-    const monteId = 17; 
-    const monte = await getMonte(monteId);
-    openMontePage(monte);
-});
-document.getElementById('shops2').addEventListener('click', async () => {
-    const monteId = 18; 
-    const monte = await getMonte(monteId);
-    openMontePage(monte);
-});
-
-
-
-function openMontePage(monte) {
-    const monteInfo = `
-      <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Loader Example</title>
-          <style>
-              .loader {
-                  position: sticky;
-                  width: 150px;
-                  height: 150px;
-                  left: 45%;
-                  top: 20%;
-                  
-
-                  .spinner {
-                      width: 100%;
-                      height: 100%;
-                      border: 30px solid transparent;
-                      border-top: 30px solid black;
-                      border-radius: 50%;
-                      animation: spin 1s linear infinite, changeColor 1s linear infinite;
-                  }
-              }
-
-              @keyframes spin {
-                  0% {
-                      transform: rotate(0deg);
-                  }
-                  100% {
-                      transform: rotate(360deg);
-                  }
-              }
-                  
-              @keyframes changeColor {
-                  0% {
-                      border-top-color: #3498db;
-                  }
-                  25% {
-                      border-top-color: #e74c3c;
-                  }
-                  50% {
-                      border-top-color: #f1c40f;
-                  }
-                  75% {
-                      border-top-color: #2ecc71;
-                  }
-                  100% {
-                      border-top-color: #3498db;
-                  }
-              }
-
-              .content {
-                  display: none;
-                  text-align: center;
-              }
-          </style>
-      </head>
-      <body style='background: url("https://github.com/Kabakus/kartinki/blob/main/BG.png?raw=true"); background-attachment: fixed; margin: 0px'>
-      <div class='body' style='height: 200vh; background: linear-gradient(180deg, rgba(252,208,0,0.8) 0%, rgba(244,101,254,0.8) 5%, rgba(0,149,255,0.8) 73%, rgba(0,153,41,0.8044467787114846) 96%);'>
-          <div class="loader" id="loader">
-              <div class="spinner"></div>
-          </div>
-          <div class="content" id="content">
-              <h2 style="color: #F5F5DC; font-weight: 800; font-size: 64px; text-align: center; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">${monte.title}</h2>
-              ${data[i].img}
-              <p style="color: #74FF9E; font-weight: 600; font-size: 30px; text-align: center; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">${monte.text}</p>
-          </div>
-          <script>
-              window.onload = function() {
-                  const loader = document.getElementById('loader');
-                  const content = document.getElementById('content');
-
-                  setTimeout(() => {
-                      loader.style.display = 'none';
-                      content.style.display = 'block';
-                  }, 5000);
-              };
-          </script>
-      </div>
-      </body>
-        
-    `;
-    const newWindow = window.open('', '_blank');
-    newWindow.document.write(monteInfo);
-    newWindow.document.close();
-}
+app.homePage();
 
 
 
