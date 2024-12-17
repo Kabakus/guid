@@ -1,5 +1,3 @@
-'use strict';
-
 class ModalWindow {
     constructor(modalId, buttonId, closeClass) {
         this.modal = document.getElementById(modalId);
